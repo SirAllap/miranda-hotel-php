@@ -9,10 +9,18 @@
         color: $color-white;
         h1 {
             margin-top: 20px;
+            @include xl {
+                margin: 0 auto 0 auto;
+                width: 1170px;
+            }
         }
         h5 {
             color: $color-white;
             font-weight: 300;
+            @include xl {
+                margin: 0 auto 20px auto;
+                width: 1170px;
+            }
         }
     }
     &__breadcrumbs {
