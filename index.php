@@ -10,3 +10,4 @@ $blade = new BladeOne($views, $compiledFolder, BladeOne::MODE_AUTO);
 
 // Example usage
 echo $blade->run('index');
+?>
