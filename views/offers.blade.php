@@ -12,10 +12,12 @@
             <h1 class="offers-intro__head-text big-title">
                 Our Offers
             </h1>
-            <div class="offers-intro__breadcrumbs">
-                <a href="/index.php"><span class="offers-intro__breadcrumbs-home">Home</span></a>
-                <span class="offers-intro__breadcrumbs-separator">&nbsp|&nbsp</span>
-                <span class="offers-intro__breadcrumbs-about">Offers</span>
+            <div class="offers-intro__breadcrumbs-container">
+                <div class="offers-intro__breadcrumbs">
+                    <a href="/index.php"><span class="offers-intro__breadcrumbs-home">Home</span></a>
+                    <span class="offers-intro__breadcrumbs-separator">&nbsp|&nbsp</span>
+                    <span class="offers-intro__breadcrumbs-about">Offers</span>
+                </div>
             </div>
         </section>
     </div>

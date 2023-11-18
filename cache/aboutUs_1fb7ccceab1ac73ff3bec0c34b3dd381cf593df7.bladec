@@ -10,10 +10,12 @@
  THE ULTIMATE LUXURY
  </h5>
  <h1 class="aboutus-intro__head-text big-title">About Us</h1>
+ <div class="aboutus-intro__breadcrumbs-container">
  <div class="aboutus-intro__breadcrumbs">
  <a href="/index.php"><span class="aboutus-intro__breadcrumbs-home">Home</span></a>
  <span class="aboutus-intro__breadcrumbs-separator">&nbsp|&nbsp</span>
  <span class="aboutus-intro__breadcrumbs-about">About</span>
+ </div>
  </div>
  </section>
  <section class="aboutus-intro__video-services">

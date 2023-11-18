@@ -12,10 +12,12 @@
 			<h1 class="room-details-intro__head-text big-title">
 				Ultimate Room
 			</h1>
-			<div class="room-details-intro__breadcrumbs">
-				<a href="/index.php"><span class="room-details-intro__breadcrumbs-home">Home</span></a>
-				<span class="room-details-intro__breadcrumbs-separator">&nbsp|&nbsp</span>
-				<span class="room-details-intro__breadcrumbs-about">Room Details</span>
+			<div class="room-details-intro__breadcrumbs-container">
+				<div class="room-details-intro__breadcrumbs">
+					<a href="/index.php"><span class="room-details-intro__breadcrumbs-home">Home</span></a>
+					<span class="room-details-intro__breadcrumbs-separator">&nbsp|&nbsp</span>
+					<span class="room-details-intro__breadcrumbs-about">Room Details</span>
+				</div>
 			</div>
 		</section>
 	</div>

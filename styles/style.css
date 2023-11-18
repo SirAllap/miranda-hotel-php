@@ -1998,10 +1998,20 @@ Common breakpoints:
     width: 1170px;
   }
 }
+.aboutus-intro__breadcrumbs-container {
+  position: relative;
+  width: 100%;
+}
+@media (min-width: 1000px) {
+  .aboutus-intro__breadcrumbs-container {
+    margin: 0 auto 20px auto;
+    max-width: 1420px;
+  }
+}
 .aboutus-intro__breadcrumbs {
   position: absolute;
-  right: 15px;
-  top: 360px;
+  right: 0px;
+  top: 50px;
   text-align: center;
   background-color: #ffffff;
   padding: 15px 25px;
@@ -2342,10 +2352,20 @@ Common breakpoints:
     width: 1170px;
   }
 }
+.rooms-intro__breadcrumbs-container {
+  position: relative;
+  width: 100%;
+}
+@media (min-width: 1000px) {
+  .rooms-intro__breadcrumbs-container {
+    margin: 0 auto 20px auto;
+    max-width: 1420px;
+  }
+}
 .rooms-intro__breadcrumbs {
   position: absolute;
-  right: 15px;
-  top: 360px;
+  right: 0px;
+  top: 50px;
   text-align: center;
   background-color: #ffffff;
   padding: 15px 25px;
@@ -2474,10 +2494,20 @@ Common breakpoints:
     width: 1170px;
   }
 }
+.offers-intro__breadcrumbs-container {
+  position: relative;
+  width: 100%;
+}
+@media (min-width: 1000px) {
+  .offers-intro__breadcrumbs-container {
+    margin: 0 auto 20px auto;
+    max-width: 1420px;
+  }
+}
 .offers-intro__breadcrumbs {
   position: absolute;
-  right: 15px;
-  top: 360px;
+  right: 0px;
+  top: 50px;
   text-align: center;
   background-color: #ffffff;
   padding: 15px 25px;
@@ -2785,10 +2815,20 @@ Common breakpoints:
     width: 1170px;
   }
 }
+.contact-intro__breadcrumbs-container {
+  position: relative;
+  width: 100%;
+}
+@media (min-width: 1000px) {
+  .contact-intro__breadcrumbs-container {
+    margin: 0 auto 20px auto;
+    max-width: 1420px;
+  }
+}
 .contact-intro__breadcrumbs {
   position: absolute;
-  right: 15px;
-  top: 360px;
+  right: 0px;
+  top: 50px;
   text-align: center;
   background-color: #ffffff;
   padding: 15px 25px;
@@ -3079,10 +3119,20 @@ Common breakpoints:
     width: 1170px;
   }
 }
+.room-details-intro__breadcrumbs-container {
+  position: relative;
+  width: 100%;
+}
+@media (min-width: 1000px) {
+  .room-details-intro__breadcrumbs-container {
+    margin: 0 auto 20px auto;
+    max-width: 1420px;
+  }
+}
 .room-details-intro__breadcrumbs {
   position: absolute;
-  right: 15px;
-  top: 360px;
+  right: 0px;
+  top: 50px;
   text-align: center;
   background-color: #ffffff;
   padding: 15px 25px;
