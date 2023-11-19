@@ -15,21 +15,24 @@
         background-color: $color-beish;
         &:hover {
             background-color: $color-midStrongGreyBack;
-            border: 2px rgba($color: #ffffff, $alpha: 0.33) solid;
+            border: 1px transparent solid;
+            outline: 1px solid rgba($color: #ffffff, $alpha: 0.33);
         }
     }
     &--beige-no-animation {
         background-color: $color-beish;
         &:hover {
             background-color: $color-midStrongGreyBack;
-            border: 2px rgba($color: #ffffff, $alpha: 0.33) solid;
+            border: 1px transparent solid;
+            outline: 1px solid rgba($color: #ffffff, $alpha: 0.33);
         }
     }
     &--auto {
         width: fit-content;
         &:hover {
             background-color: $color-midStrongGreyBack;
-            border: 2px rgba($color: #ffffff, $alpha: 0.33) solid;
+            border: 1px transparent solid;
+            outline: 1px solid rgba($color: #ffffff, $alpha: 0.33);
         }
     }
     &--grey {
@@ -37,7 +40,7 @@
         border: 2px rgba($color: #ffffff, $alpha: 0.33) solid;
         &:hover {
             background-color: $color-beish;
-            border: none;
+            border: 1px transparent solid;
         }
     }
 }
