@@ -1,6 +1,9 @@
 <?php
 require 'lib/BladeOne.php';
 
+require __DIR__ . '/vendor/autoload.php';
+Dotenv\Dotenv::createUnsafeImmutable(__DIR__ . '/')->load();
+
 use eftec\bladeone\BladeOne;
 
 $views = 'views'; // Specify the directory where your Blade templates are located.
