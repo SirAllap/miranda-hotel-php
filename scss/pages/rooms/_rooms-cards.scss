@@ -32,11 +32,15 @@
     }
     &__text-second-span {
         :hover {
-            color: #222222;
+            background-color: $color-softGreyText;
+            border: none;
+            color: white;
         }
         a {
+            transition: 0.3s all;
             text-decoration: none;
             color: inherit;
+            padding: 12px;
         }
         font-size: 16px;
         font-family: $arch-font;
