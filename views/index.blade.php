@@ -1,3 +1,11 @@
+<?php
+include '../config.php';
+
+echo $conn;
+
+echo $_ENV['USERNAME'];
+?>
+
 @extends('layout')
 @section('title', 'Home')
 
