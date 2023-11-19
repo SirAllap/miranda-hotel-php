@@ -1,9 +1,9 @@
 <?php
 
 $servername = $_SERVER['SERVERNAME'];
-$username = $_USER['USERNAME'];
-$password = $_PASS['PASSWORD'];
-$database = $_DB['DATABASE'];
+$username = $_SERVER['USERNAME'];
+$password = $_SERVER['PASSWORD'];
+$database = $_SERVER['DATABASE'];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
@@ -13,4 +13,4 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-echo "Connected successfully \n";
+// echo "Connected successfully \n";
