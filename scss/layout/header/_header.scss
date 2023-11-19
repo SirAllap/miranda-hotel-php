@@ -74,42 +74,46 @@
         align-items: center;
         width: 50vw;
         @include desktop {
-            width: 90%;
-        }
-        @include xl {
-            width: 35%;
+            width: 67%;
         }
     }
     &__desktop-menu {
-        @include desktop {
-            display: block;
-        }
-
         display: none;
         font-family: $arch-font;
         font-size: 16px;
         width: 388px;
+        @include desktop {
+            display: block;
+        }
     }
     &__desktop-menu-list {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        width: 400px;
+        width: 450px;
         height: 100%;
     }
     &__desktop-menu-list-item {
         margin-right: 40px;
         list-style-type: none;
+        transition: 0.3s all;
         a {
             text-decoration: none;
             color: black;
             line-height: 2.5;
             font-weight: 600;
             cursor: pointer;
+            border-bottom: 2px solid transparent;
+            padding: 0 5px 10px 5px;
+            transition: 0.3s all;
         }
         a:hover {
-            text-decoration: underline;
+            border-bottom: 2px solid $color-softGreyText1;
+            color: $color-ligthGrayDisable;
+        }
+        &:hover {
+            transform: scale(1.05);
         }
     }
     &__desktop-menu-list-item :last-child {
