@@ -1,9 +1,9 @@
 <?php
 
-$servername = $_SERVER['SERVERNAME'];
-$username = $_SERVER['USERNAME'];
-$password = $_SERVER['PASSWORD'];
-$database = $_SERVER['DATABASE'];
+$servername = $_ENV['SERVERNAME'];
+$username = $_ENV['USERNAME'];
+$password = $_ENV['PASSWORD'];
+$database = $_ENV['DATABASE'];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
