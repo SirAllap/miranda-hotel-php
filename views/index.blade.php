@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 @extends('layout')
 @section('title', 'Home')
 
@@ -11,6 +7,11 @@
 	<div class="home-intro__text">
 		<section class="home-intro__text-section">
 			<h5 class="home-intro__text subtitle-trigger">
+				<ul>
+					@foreach ($data as $item)
+					<li>{{$item['room_number']}}</li>
+					@endforeach
+				</ul>
 				THE ULTIMATE LUXURY EXPERIENCE
 			</h5>
 			<h1 class="home-intro__text big-title">
