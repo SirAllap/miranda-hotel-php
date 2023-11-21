@@ -60,6 +60,11 @@
                 </li>
             </ul>
         </div>
+        <div class="header__mobile-icons-right">
+            <div class="header__person-icon material-symbols-outlined">
+                person
+            </div>
+        </div>
     </header>
     <section id="dropDown" class="mobile__drop-down-menu">
         <ul class="mobile__menu-list">
