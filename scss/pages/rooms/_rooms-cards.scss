@@ -21,7 +21,8 @@
         box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
     }
     &__text-container {
-        margin: 0px 20px 40px 20px;
+        margin: 0px 20px 20px 20px;
+        height: 150px;
     }
     p {
         color: $color-softGreyText;
@@ -33,14 +34,15 @@
     &__text-second-span {
         :hover {
             background-color: $color-softGreyText;
-            border: none;
             color: white;
+            border: 2px solid $color-softGreyText;
         }
         a {
+            border: 2px solid $color-verySoftGrey;
             transition: 0.3s all;
             text-decoration: none;
             color: inherit;
-            padding: 12px;
+            padding: 8px 12px;
         }
         font-size: 16px;
         font-family: $arch-font;
@@ -53,13 +55,11 @@
         height: 300px;
     }
 }
-
 .swiper-rooms-cards {
     @include desktop {
         max-width: 1170px;
     }
 }
-
 #pagination-rooms-cards {
     --swiper-pagination-bullet-border-radius: 0px;
     --swiper-pagination-bullet-size: 20px;
@@ -69,4 +69,19 @@
 }
 .swiper-pagination-bullet-active {
     color: white;
+}
+.rooms-cards__wrapper {
+    width: fit-content !important;
+    @include desktop {
+        display: grid !important;
+        grid-template-rows: auto auto auto;
+        grid-auto-flow: column !important;
+
+        > .swiper-slide {
+            height: fit-content !important;
+        }
+    }
+}
+.swiper-slide-rooms-cards {
+    margin-top: 0 !important;
 }

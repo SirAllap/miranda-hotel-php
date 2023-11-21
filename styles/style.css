@@ -1616,6 +1616,7 @@ Common breakpoints:
   }
 }
 .home-rooms__slider-info-card {
+  box-shadow: rgba(33, 35, 38, 0.029) 0px 10px 10px;
   position: relative;
   top: 50%;
   left: 50%;
@@ -2473,7 +2474,8 @@ Common breakpoints:
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 .rooms-cards__text-container {
-  margin: 0px 20px 40px 20px;
+  margin: 0px 20px 20px 20px;
+  height: 150px;
 }
 .rooms-cards p {
   color: #777777;
@@ -2490,14 +2492,15 @@ Common breakpoints:
 }
 .rooms-cards__text-second-span :hover {
   background-color: #777777;
-  border: none;
   color: white;
+  border: 2px solid #777777;
 }
 .rooms-cards__text-second-span a {
+  border: 2px solid #bdbdbd;
   transition: 0.3s all;
   text-decoration: none;
   color: inherit;
-  padding: 12px;
+  padding: 8px 12px;
 }
 
 @media (min-width: 1000px) {
@@ -2522,6 +2525,24 @@ Common breakpoints:
 
 .swiper-pagination-bullet-active {
   color: white;
+}
+
+.rooms-cards__wrapper {
+  width: fit-content !important;
+}
+@media (min-width: 1000px) {
+  .rooms-cards__wrapper {
+    display: grid !important;
+    grid-template-rows: auto auto auto;
+    grid-auto-flow: column !important;
+  }
+  .rooms-cards__wrapper > .swiper-slide {
+    height: fit-content !important;
+  }
+}
+
+.swiper-slide-rooms-cards {
+  margin-top: 0 !important;
 }
 
 .offers-intro__head-section {
