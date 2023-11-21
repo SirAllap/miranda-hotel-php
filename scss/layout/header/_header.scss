@@ -172,7 +172,6 @@
         div {
             font-size: 30px;
         }
-
         @include desktop {
             margin-right: 70px;
         }
@@ -185,9 +184,17 @@
         }
     }
     &__person-icon {
+        transition: 0.3s all;
+        cursor: pointer;
         @include desktop {
-            padding: 10px;
+            padding: 11px;
             border: 2px solid rgba(133, 133, 133, 0.3);
+            &:hover {
+                color: $color-white;
+                background-color: #333333ad;
+                border: 2px solid rgba(133, 133, 133, 0.3);
+                transform: scale(0.98);
+            }
         }
     }
     &__desktop-burger-icon {
