@@ -230,10 +230,20 @@ Common breakpoints:
     border: 2px solid rgba(133, 133, 133, 0.3);
   }
 }
+.header__person-icon {
+  transition: 0.3s all;
+  cursor: pointer;
+}
 @media (min-width: 1000px) {
   .header__person-icon {
-    padding: 10px;
+    padding: 11px;
     border: 2px solid rgba(133, 133, 133, 0.3);
+  }
+  .header__person-icon:hover {
+    color: #ffffff;
+    background-color: rgba(51, 51, 51, 0.6784313725);
+    border: 2px solid rgba(133, 133, 133, 0.3);
+    transform: scale(0.98);
   }
 }
 .header__desktop-burger-icon {
@@ -1526,6 +1536,9 @@ Common breakpoints:
   width: 100%;
   object-fit: cover;
 }
+.home-rooms__slider-button-next, .home-rooms__slider-button-prev {
+  top: var(--swiper-navigation-top-offset, 40%) !important;
+}
 @media (min-width: 720px) {
   .home-rooms__slider-button-next, .home-rooms__slider-button-prev {
     margin: 0 15%;
@@ -1547,15 +1560,25 @@ Common breakpoints:
   transform: scale(1.8);
 }
 .home-rooms__services-info {
-  z-index: 5;
   position: relative;
+  z-index: 5;
   top: 26px;
-  max-width: 290px;
+  height: fit-content;
+  object-fit: cover;
+  max-width: 70%;
 }
 @media (min-width: 1000px) {
   .home-rooms__services-info {
-    max-width: 450px;
+    max-width: 55%;
   }
+}
+@media (min-width: 1200px) {
+  .home-rooms__services-info {
+    max-width: 55%;
+  }
+}
+.home-rooms__slider {
+  position: relative;
 }
 @media (min-width: 1000px) {
   .home-rooms__slider {
@@ -1572,33 +1595,24 @@ Common breakpoints:
     height: 550px;
   }
 }
-.home-rooms__slider--swiper-slidepic {
-  opacity: 0.4;
-  overflow: hidden;
-  transition: 0.7s;
-}
 .home-rooms__slider-info-card {
-  z-index: 5;
   position: relative;
-  bottom: 26px;
-  margin: auto;
-  padding: 20px 20px 0 20px;
-  background-color: #ffffff;
-  max-width: 90%;
-}
-@media (min-width: 720px) {
-  .home-rooms__slider-info-card {
-    max-width: 60%;
-  }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  padding: 20px;
+  background-color: #ffffff !important;
+  max-width: 80%;
+  max-height: 340px;
 }
 @media (min-width: 1000px) {
   .home-rooms__slider-info-card {
-    max-width: 40%;
+    max-width: 70%;
   }
 }
 @media (min-width: 1200px) {
   .home-rooms__slider-info-card {
-    max-width: 30%;
+    max-width: 75%;
   }
 }
 .home-rooms__slider-info-card h4 {
@@ -1608,17 +1622,16 @@ Common breakpoints:
   margin-top: 20px;
 }
 .home-rooms__intro-video {
-  margin-top: 60px;
+  margin-top: 20px;
   position: relative;
   padding: 20px;
   background-color: #222222;
 }
 @media (min-width: 1000px) {
   .home-rooms__intro-video {
-    margin-top: 120px;
     max-height: 700px;
     max-width: 1420px;
-    margin: 0 auto;
+    margin: auto;
     background: rgb(34, 34, 34);
     background: linear-gradient(90deg, rgb(34, 34, 34) 68%, rgb(173, 157, 130) 68%);
   }
@@ -1722,10 +1735,21 @@ Common breakpoints:
   }
 }
 
-.swiper-slide-active {
+.home-rooms__card-container.swiper-slide-prev {
+  opacity: 0.5;
+  overflow: unset !important;
+}
+.home-rooms__card-container.swiper-slide-active {
   opacity: 1;
-  z-index: 1;
-  transform: scale(1.5);
+  overflow: unset !important;
+}
+.home-rooms__card-container.swiper-slide-next {
+  opacity: 0.5;
+  overflow: unset !important;
+}
+
+.home-swiper-rooms {
+  height: fit-content;
 }
 
 .home-facilities {

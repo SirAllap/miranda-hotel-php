@@ -101,40 +101,34 @@
 		<h4 class="home-rooms__text subtitle-trigger">ROOMS</h4>
 		<h1 class="home-roooms__text big-title">Hand Picked Rooms</h1>
 	</div>
-	<div class="home-rooms__services-slider-with-price">
-		<img class="home-rooms__services-info" src="../assets/images/miranda_services_info.png" alt="a serie of icons representing room services" />
 
+	<div class="home-rooms__services-slider-with-price">
 		<div id="desktopSlider" class="home-rooms__slider home-rooms__slider--swiper-rooms swiper home-swiper-rooms">
 			<div class="swiper-wrapper">
-				<img class="swiper-slide home-rooms__slider--swiper-slidepic" src="/assets/images/rooms/room2.jpg" alt="" />
-				<img class="swiper-slide home-rooms__slider--swiper-slidepic" src="/assets/images/rooms/room3.jpg" alt="" />
-				<img class="swiper-slide home-rooms__slider--swiper-slidepic" src="/assets/images/rooms/room4.jpg" alt="" />
-				<img class="swiper-slide home-rooms__slider--swiper-slidepic" src="/assets/images/rooms/room6.jpg" alt="" />
-				<img class="swiper-slide home-rooms__slider--swiper-slidepic" src="/assets/images/rooms/room7.jpg" alt="" />
-				<img class="swiper-slide home-rooms__slider--swiper-slidepic" src="/assets/images/rooms/room9.jpg" alt="" />
-				<img class="swiper-slide home-rooms__slider--swiper-slidepic" src="/assets/images/rooms/room8.jpg" alt="" />
-				<img class="swiper-slide home-rooms__slider--swiper-slidepic" src="/assets/images/rooms/room11.jpg" alt="" />
-				<img class="swiper-slide home-rooms__slider--swiper-slidepic" src="/assets/images/rooms/room12.jpg" alt="" />
-				<img class="swiper-slide home-rooms__slider--swiper-slidepic" src="/assets/images/rooms/room13.jpg" alt="" />
+				@foreach ($rooms as $room)
+				<div class="home-rooms__card-container swiper-slide">
+					<img class="home-rooms__services-info" src="../assets/images/miranda_services_info.png" alt="a serie of icons representing room services" />
+					<img class=" home-rooms__slider--swiper-slidepic" src="{{$room['URL']}}" alt="" />
+					<div class="home-rooms__slider-info-card">
+						<h1 class="home-rooms__info-card-title regular-title">
+							{{$room['room_type']}}
+						</h1>
+						<h4 class="home-rooms__info-card-body filled-text">
+							{{$room['description']}}
+						</h4>
+						<div class="home-rooms__info-card-price-amount-nigth">
+							<span class="home-rooms__info-card-price price-amount">${{$room['price']}}</span><span class="home-rooms__info-card-price price-nigth">/Night</span>
+						</div>
+					</div>
+				</div>
+				@endforeach
 			</div>
 			<div class="home-rooms__slider-button-prev swiper-button-prev"></div>
 			<div class="home-rooms__slider-button-next swiper-button-next"></div>
 		</div>
-
-		<div class="home-rooms__slider-info-card">
-			<h1 class="home-rooms__info-card-title regular-title">
-				Minimal Duplex Room
-			</h1>
-			<h4 class="home-rooms__info-card-body filled-text">
-				Experience the epitome of elegance and comfort in our
-				lavish hotel suites, adorned with exquisite furnishings
-				and stunning vistas.
-			</h4>
-			<div class="home-rooms__info-card-price-amount-nigth">
-				<span class="home-rooms__info-card-price price-amount">$345</span><span class="home-rooms__info-card-price price-nigth">/Night</span>
-			</div>
-		</div>
+		<div></div>
 	</div>
+
 	<div class="home-rooms__intro-video">
 		<section class="home-rooms__intro-video-text">
 			<h4 class="home-rooms__text new-subtitle-head-gold">
