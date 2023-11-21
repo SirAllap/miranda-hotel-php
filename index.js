@@ -223,7 +223,14 @@ const swiperRoomsCards = initializeSwiper('.swiper-rooms-cards', {
     breakpoints: {
         1000: {
             slidesPerView: 3,
-            spaceBetween: 30,
+            slidesPerGroup: 3,
+            slidesPerColumn: 3,
+            spaceBetween: 20,
+            slidesPerColumnFill: 'column',
+            grid: {
+                fill: 'row',
+                rows: 3,
+            }
         },
     },
 })
