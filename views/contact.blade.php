@@ -57,17 +57,24 @@
 
 <main class="contact-intro__form">
 	<div class="contact-intro__form-wrapper">
-		<input id="input-name" placeholder="Your full name" type="text" />
-		<input id="input-phone" placeholder="Add phone number" type="text" />
-		<input id="input-email" placeholder="Enter email address" type="text" />
-		<input id="input-subject" placeholder="Enter subject" type="text" />
+		<form action="../contact.php" method="post">
+			<input id="input-name" name="name" placeholder="Your full name" type="text" required />
+			<input id="input-phone" name="phone" placeholder="Add phone number" type="text" required />
+			<input id="input-email" name="email" placeholder="Enter email address" type="text" required />
+			<input id="input-subject" name="subject" placeholder="Enter subject" type="text" required />
+			<div class="contact-intro__form-wrapper">
+				<textarea name="message" placeholder="Enter message" id="input-messsage-body" cols="30" rows="10" required></textarea>
+			</div>
+			<button type="submit" class="contact-intro__form-button button button--beige button--auto">
+				SEND
+			</button>
+		</form>
 	</div>
-	<div class="contact-intro__form-wrapper">
-		<textarea placeholder="Enter message" name="" id="" cols="30" rows="10"></textarea>
-	</div>
-	<button class="contact-intro__form-button button button--beige button--auto">
-		SEND
-	</button>
 </main>
 
 @endsection
+@if (!empty($confirmation))
+<script>
+	alert('Data succesfully received')
+</script>
+@endif
