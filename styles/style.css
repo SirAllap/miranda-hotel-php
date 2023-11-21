@@ -1362,12 +1362,12 @@ Common breakpoints:
 }
 @media (min-width: 1000px) {
   .home-about__background {
+    position: absolute;
     width: 748px;
     height: 610px;
     z-index: -1;
     background: url("../../../assets/images/background.png");
     background-repeat: no-repeat;
-    position: absolute;
     right: 30%;
     bottom: 36%;
     transform: translate(50%, 50%);
@@ -1435,6 +1435,7 @@ Common breakpoints:
     max-width: 270px;
     margin: 0 auto;
     padding: 0;
+    box-shadow: none;
   }
 }
 .home-about__card--topcard {
