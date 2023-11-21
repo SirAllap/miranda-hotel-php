@@ -1,12 +1,13 @@
 <?php
-require 'lib/BladeOne.php';
+//BladeTemplate
+require_once('setup.php');
+//DB config
+require_once('config.php');
 
-use eftec\bladeone\BladeOne;
+$sql = "SELECT r.*, p.URL FROM room r INNER JOIN photo p ON r.id = p.room_id;";
+$result = $conn->query($sql);
 
-$views = 'views'; // Specify the directory where your Blade templates are located.
-$compiledFolder = 'cache'; // Specify the directory where compiled views will be stored.
+$rooms = $result->fetch_all(MYSQLI_ASSOC);
 
-$blade = new BladeOne($views, $compiledFolder, BladeOne::MODE_AUTO);
-
-// Example usage
 echo $blade->run('rooms');
+$conn->close();
