@@ -25,6 +25,7 @@
     }
     &__slider-button-next,
     &__slider-button-prev {
+        top: var(--swiper-navigation-top-offset, 40%) !important;
         @include md {
             margin: 0 15%;
         }
@@ -41,15 +42,21 @@
         }
     }
     &__services-info {
-        z-index: 5;
         position: relative;
+        z-index: 5;
         top: 26px;
-        max-width: 290px;
+        height: fit-content;
+        object-fit: cover;
+        max-width: 70%;
         @include desktop {
-            max-width: 450px;
+            max-width: 55%;
+        }
+        @include xl {
+            max-width: 55%;
         }
     }
     &__slider {
+        position: relative;
         @include desktop {
             height: 350px;
         }
@@ -59,28 +66,21 @@
         @include xxl {
             height: 550px;
         }
-        &--swiper-slidepic {
-            opacity: 0.4;
-            overflow: hidden;
-            transition: 0.7s;
-        }
     }
     &__slider-info-card {
-        z-index: 5;
         position: relative;
-        bottom: 26px;
-        margin: auto;
-        padding: 20px 20px 0 20px;
-        background-color: $color-white;
-        max-width: 90%;
-        @include md {
-            max-width: 60%;
-        }
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        padding: 20px;
+        background-color: $color-white !important;
+        max-width: 80%;
+        max-height: 340px;
         @include desktop {
-            max-width: 40%;
+            max-width: 70%;
         }
         @include xl {
-            max-width: 30%;
+            max-width: 75%;
         }
         h4 {
             margin-top: 20px;
@@ -90,15 +90,14 @@
         }
     }
     &__intro-video {
-        margin-top: 60px;
+        margin-top: 20px;
         position: relative;
         padding: 20px;
         background-color: $color-strongerGreyBack;
         @include desktop {
-            margin-top: 120px;
             max-height: 700px;
             max-width: 1420px;
-            margin: 0 auto;
+            margin: auto;
             background: rgb(34, 34, 34);
             background: linear-gradient(90deg, rgba(34, 34, 34, 1) 68%, rgba(173, 157, 130, 1) 68%);
         }
@@ -191,8 +190,21 @@
     }
 }
 
-.swiper-slide-active {
-    opacity: 1;
-    z-index: 1;
-    transform: scale(1.5);
+.home-rooms__card-container {
+    &.swiper-slide-prev {
+        opacity: 0.5;
+        overflow: unset !important;
+    }
+    &.swiper-slide-active {
+        opacity: 1;
+        overflow: unset !important;
+    }
+    &.swiper-slide-next {
+        opacity: 0.5;
+        overflow: unset !important;
+    }
+}
+
+.home-swiper-rooms {
+    height: fit-content;
 }
