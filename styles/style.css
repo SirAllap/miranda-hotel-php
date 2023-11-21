@@ -216,11 +216,6 @@ Common breakpoints:
 .header__mobile-icons-right div {
   font-size: 30px;
 }
-@media (min-width: 1000px) {
-  .header__mobile-icons-right {
-    margin-right: 70px;
-  }
-}
 .header__search-icon {
   margin-left: 20px;
 }
@@ -237,13 +232,13 @@ Common breakpoints:
 @media (min-width: 1000px) {
   .header__person-icon {
     padding: 11px;
-    border: 2px solid rgba(133, 133, 133, 0.3);
+    border: 2px solid rgba(133, 133, 133, 0.121);
   }
   .header__person-icon:hover {
     color: #ffffff;
     background-color: rgba(51, 51, 51, 0.6784313725);
     border: 2px solid rgba(133, 133, 133, 0.3);
-    transform: scale(0.98);
+    transform: scale(1.05);
   }
 }
 .header__desktop-burger-icon {
@@ -256,6 +251,30 @@ Common breakpoints:
     padding: 10px;
     border: 2px solid rgba(133, 133, 133, 0.3);
   }
+}
+
+.item-link-about.active {
+  border-bottom: 2px solid #999999;
+  color: #686868;
+  transform: scale(1.05);
+}
+
+.item-link-rooms.active {
+  border-bottom: 2px solid #999999;
+  color: #686868;
+  transform: scale(1.05);
+}
+
+.item-link-offers.active {
+  border-bottom: 2px solid #999999;
+  color: #686868;
+  transform: scale(1.05);
+}
+
+.item-link-contact.active {
+  border-bottom: 2px solid #999999;
+  color: #686868;
+  transform: scale(1.05);
 }
 
 .mobile__drop-down-menu {
