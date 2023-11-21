@@ -1,3 +1,7 @@
+if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href)
+}
+
 const icon_burger = document.querySelector('.header__mobile-burger-icon')
 const icon_close = document.querySelector('.header__mobile-close-icon')
 const drop_down = document.querySelector('.mobile__menu-list')
