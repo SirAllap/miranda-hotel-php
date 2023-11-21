@@ -1,9 +1,24 @@
-
-
 const icon_burger = document.querySelector('.header__mobile-burger-icon')
 const icon_close = document.querySelector('.header__mobile-close-icon')
 const drop_down = document.querySelector('.mobile__menu-list')
 const header = document.querySelector('.header')
+const about_Us_Link = document.querySelector('.item-link-about')
+const rooms_Link = document.querySelector('.item-link-rooms')
+const offers_Link = document.querySelector('.item-link-offers')
+const contact_Link = document.querySelector('.item-link-contact')
+
+if (window.location.href.includes('aboutUs')) {
+    about_Us_Link.classList.toggle('active')
+}
+if (window.location.href.includes('rooms')) {
+    rooms_Link.classList.toggle('active')
+}
+if (window.location.href.includes('offers')) {
+    offers_Link.classList.toggle('active')
+}
+if (window.location.href.includes('contact')) {
+    contact_Link.classList.toggle('active')
+}
 
 icon_burger.addEventListener('click', () => {
     icon_burger.classList.toggle('hide')
@@ -21,7 +36,6 @@ window.addEventListener('load', () => {
         header.classList.remove('header--hide-on-top')
     if (window.innerWidth >= 1200) {
         runDesktopView()
-        destroyFeaturesSwiper()
     } else if (window.innerWidth >= 720) {
         destroyRestaurantSwiper()
     } else {
@@ -154,7 +168,6 @@ let swiperRestaurantPhotos = initializeSwiper('.swiper-restaurant-photos', {
     breakpoints: {
         1000: {
             slidesPerView: 3,
-            spaceBetween: 50,
         },
     },
 })
