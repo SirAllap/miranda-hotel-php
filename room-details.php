@@ -33,8 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         $stmt->bind_param("ssssss", $full_name, $phone_number, $trip_start, $trip_end, $special_request, $room_id);
 
         if ($stmt->execute()) {
-            $_SESSION['confirmation'] = ['message' => 'Form sent!'];
-            echo $blade->run('index');
+            $confirmation = 'Thank you for your request. We have received it correctly. Someone from our Team will get back to you very soon.';
+
+            echo $blade->run('index', ['confirmation' =>  $confirmation]);
             session_destroy();
         } else {
             $confirmation = [null, $stmt->error];
