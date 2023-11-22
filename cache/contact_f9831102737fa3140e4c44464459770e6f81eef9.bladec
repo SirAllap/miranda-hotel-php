@@ -73,9 +73,4 @@
 </main>
 
 <?php $this->stopSection(); ?>
-<?php if(!empty($confirmation)): ?>
-<script>
-	alert('Data succesfully received')
-</script>
-<?php endif; ?>
 <?php if (isset($_shouldextend[1])) { echo $this->runChild('layout'); } ?>

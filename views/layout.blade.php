@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="shortcut icon" href="../favicon.ico" type="image/ico" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>@yield('title')</title>
 </head>
 
@@ -166,6 +167,18 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script type="module" src="../index.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
+@if ($confirmation)
+<script>
+    Toastify({
+        text: "{{$confirmation['message']}}",
+        className: "info",
+        style: {
+            background: "#bead8e",
+        }
+    }).showToast();
+</script>
+@endif
 
 </html>

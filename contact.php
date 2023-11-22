@@ -1,4 +1,5 @@
 <?php
+session_start();
 //BladeTemplate
 require_once('setup.php');
 //DB config
@@ -20,9 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->bind_param("sssss", $full_name, $email, $phone_number, $subject_of_review, $review_body);
 
         if ($stmt->execute()) {
-            $confirmation = true;
+            $_SESSION['confirmation'] = ['message' => 'Form sent!'];
         } else {
-            $confirmation = "Error: " . $stmt->error;
+            $confirmation = [null, $stmt->error];
+            $_SESSION['confirmation'] = ['message' => 'Form not sent!', 'error' => true];
         }
 
         $stmt->close();
@@ -31,5 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-echo $blade->run('contact', ['confirmation' => $confirmation]);
+echo $blade->run('contact', ['confirmation' =>  $_SESSION['confirmation'] ?? null, 'error' => false]);
+$_SESSION['confirmation'] = null;
 $conn->close();

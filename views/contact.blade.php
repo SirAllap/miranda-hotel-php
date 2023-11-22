@@ -73,8 +73,3 @@
 </main>
 
 @endsection
-@if (!empty($confirmation))
-<script>
-	alert('Data succesfully received')
-</script>
-@endif

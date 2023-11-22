@@ -41,13 +41,13 @@
 			<label for="">Check Out</label>
 			<input class="room-details-intro__calendar-picker" placeholder="Sun, 16th June 2020" type="date" onfocus="(this.type='date')" onblur="(this.type='text')" required />
 			<label for="">Full Name</label>
-			<input id="input-full-name" name="full-name" placeholder="Your full name" type="text" required />
+			<input id="input-details-name" name="full-name" placeholder="Your full name" type="text" required />
 			<label for="">Email</label>
-			<input id="input-email" name="email" placeholder="Enter email address" type="text" required />
+			<input id="input-details-email" name="email" placeholder="Enter email address" type="text" required />
 			<label for="">Phone</label>
-			<input id="input-phone" name="phone" placeholder="Add phone number" type="text" required />
+			<input id="input-details-phone" name="phone" placeholder="Add phone number" type="text" required />
 			<label for="">Special Request</label>
-			<input id="input-special-request" name="special-request" placeholder="Enter subject" type="text" required />
+			<input id="input-details-special-request" name="special-request" placeholder="Enter subject" type="text" required />
 		</form>
 		<button class="button button--beige button--auto">
 			CHECK AVAILABILITY
