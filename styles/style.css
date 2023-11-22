@@ -2479,28 +2479,31 @@ Common breakpoints:
 }
 .rooms-cards p {
   color: #777777;
-  margin-top: 20px;
+  margin-top: 10px;
+  height: 60px;
 }
 .rooms-cards__text-frist-span {
   font-size: 16px;
 }
-.rooms-cards__text-second-span {
-  font-size: 16px;
-  font-family: "Archivo";
-  font-weight: 700;
-  color: #bdbdbd;
+.rooms-cards form {
+  display: inline;
 }
 .rooms-cards__text-second-span :hover {
   background-color: #777777;
   color: white;
   border: 2px solid #777777;
 }
-.rooms-cards__text-second-span a {
+.rooms-cards__text-second-span button {
   border: 2px solid #bdbdbd;
   transition: 0.3s all;
   text-decoration: none;
   color: inherit;
   padding: 8px 12px;
+  font-size: 16px;
+  font-family: "Archivo";
+  font-weight: 700;
+  color: rgba(34, 34, 34, 0.5019607843);
+  background-color: transparent;
 }
 
 @media (min-width: 1000px) {
@@ -3252,6 +3255,8 @@ Common breakpoints:
 .room-details-intro__room-details img {
   margin-top: 16px;
   width: 100%;
+  height: 500px;
+  object-fit: cover;
 }
 @media (min-width: 1200px) {
   .room-details-intro__room-details img {

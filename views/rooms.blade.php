@@ -38,7 +38,12 @@
 						<p class="filled-text">
 							{{$room['description']}}
 						</p>
-						<span class="rooms-cards__text-frist-span price-amount">${{$room['price']}}/Night</span>&nbsp&nbsp&nbsp&nbsp<span class="rooms-cards__text-second-span"><a href="/room-details.php">Booking Now</a></span>
+						<span class="rooms-cards__text-frist-span price-amount">${{$room['price']}}/Night</span>&nbsp&nbsp&nbsp&nbsp
+						<form action="../room-details.php" method="get"><span class="rooms-cards__text-second-span">
+								<input type="hidden" name="room_id" value="{{$room['id']}}" />
+								<button type="submit">Booking Now</button>
+							</span>
+						</form>
 					</div>
 				</div>
 			</div>
