@@ -72,6 +72,8 @@
         img {
             margin-top: 16px;
             width: 100%;
+            height: 500px;
+            object-fit: cover;
             @include xl {
                 width: 770px;
             }
