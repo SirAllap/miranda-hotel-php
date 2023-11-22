@@ -168,7 +168,8 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script type="module" src="../index.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-@if ($confirmation)
+
+@if (isset($confirmation) && $confirmation !== '')
 <script>
     Toastify({
         text: "{{$confirmation}}",

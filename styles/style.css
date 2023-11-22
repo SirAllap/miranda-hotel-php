@@ -1923,30 +1923,6 @@ Common breakpoints:
   height: 400px;
   padding-bottom: 50px;
 }
-@media (min-width: 720px) {
-  .home-menu__restaurant-photos img {
-    width: 30vw !important;
-    height: 30vw !important;
-    padding: calc(1vw - 6px);
-    margin: 0 auto;
-  }
-}
-@media (min-width: 1000px) {
-  .home-menu__restaurant-photos img {
-    width: 25vw !important;
-    height: 25vw !important;
-    padding: calc(1vw - 6px);
-    margin: 0 auto;
-  }
-}
-@media (min-width: 1200px) {
-  .home-menu__restaurant-photos img {
-    width: 20vw !important;
-    height: 20vw !important;
-    padding: calc(1vw - 6px);
-    margin: 0 auto;
-  }
-}
 .home-menu__slider-button-prev {
   top: var(--swiper-navigation-top-offset, 90%) !important;
   left: var(--swiper-navigation-sides-offset, 70%) !important;
