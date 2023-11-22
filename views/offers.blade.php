@@ -24,29 +24,27 @@
 </main>
 
 <main class="offers-intro__cards">
+    @foreach ($rooms as $room)
     <div class="offers-intro__offer-card">
         <div class="offers-intro__offer-card-image">
             <img src="../assets/images/hotelRooms/hotel_room13.jpg" alt="" />
             <div class="offers-intro__offer-card-image-price-offer">
                 <div class="offers-intro__lined-price">
-                    <span class="price-amount">$500</span><span class="price-nigth">/Night</span>
+                    <span class="price-amount">${{$room['price']}}</span><span class="price-nigth">/Night</span>
                 </div>
                 <div class="offers-intro__red-price">
-                    <span class="price-amount">$345</span><span class="price-nigth">/Night</span>
+                    @php
+                    $discountedPrice = intval($room['price'] - $room['price'] * $room['discount'] / 100);
+                    @endphp
+                    <span class="price-amount">${{ $discountedPrice }}</span><span class="price-nigth">/Night</span>
                 </div>
             </div>
         </div>
         <div class="offers-intro__offer-card-body">
-            <h4 class="subtitle-trigger">DOUBLE BED</h4>
-            <h1 class="big-title">Luxury Double Bed</h1>
+            <h4 class="subtitle-trigger">{{$room['room_type']}}</h4>
+            <h1 class="big-title">Luxury {{$room['room_type']}}</h1>
             <p class="filled-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex
-                ea commodo consequat. Duis aute irure dolor in reprehend
-                erit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.
+                {{$room['description']}}
             </p>
             <div class="offers-intro__offer-card-body-services">
                 <div class="offers-intro__offer-card-body-services-left">
@@ -90,204 +88,7 @@
             </button>
         </div>
     </div>
-    <div class="offers-intro__offer-card">
-        <div class="offers-intro__offer-card-image">
-            <img src="../assets/images/hotelRooms/hotel_room1.jpg" alt="" />
-            <div class="offers-intro__offer-card-image-price-offer">
-                <div class="offers-intro__lined-price">
-                    <span class="price-amount">$500</span><span class="price-nigth">/Night</span>
-                </div>
-                <div class="offers-intro__red-price">
-                    <span class="price-amount">$345</span><span class="price-nigth">/Night</span>
-                </div>
-            </div>
-        </div>
-        <div class="offers-intro__offer-card-body">
-            <h4 class="subtitle-trigger">DOUBLE BED</h4>
-            <h1 class="big-title">Luxury Double Bed</h1>
-            <p class="filled-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex
-                ea commodo consequat. Duis aute irure dolor in reprehend
-                erit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.
-            </p>
-            <div class="offers-intro__offer-card-body-services">
-                <div class="offers-intro__offer-card-body-services-left">
-                    <div>
-                        <img src="../assets/images/offers_services/air_conditioner.png" alt="" /><span>Air Conditioner</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/breakfast.png" alt="" /><span>Breakfast</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/cleaning.png" alt="" /><span>Cleaning</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/grocery.png" alt="" /><span>Grocery</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/shop_near.png" alt="" /><span>Shop Near</span>
-                    </div>
-                </div>
-
-                <div class="offers-intro__offer-card-body-services-right">
-                    <div>
-                        <img src="../assets/images/offers_services/Vector.png" alt="" /><span>High Speed Wifi</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/kitchen.png" alt="" /><span>Kitchen</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/shower.png" alt="" /><span>Shower</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/single_bed.png" alt="" /><span>Single Bed</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/towels.png" alt="" /><span>Towels</span>
-                    </div>
-                </div>
-            </div>
-            <button class="offers-intro__button button button--beige">
-                BOOK NOW
-            </button>
-        </div>
-    </div>
-    <div class="offers-intro__offer-card">
-        <div class="offers-intro__offer-card-image">
-            <img src="../assets/images/hotelRooms/hotel_room16.jpg" alt="" />
-            <div class="offers-intro__offer-card-image-price-offer">
-                <div class="offers-intro__lined-price">
-                    <span class="price-amount">$500</span><span class="price-nigth">/Night</span>
-                </div>
-                <div class="offers-intro__red-price">
-                    <span class="price-amount">$345</span><span class="price-nigth">/Night</span>
-                </div>
-            </div>
-        </div>
-        <div class="offers-intro__offer-card-body">
-            <h4 class="subtitle-trigger">DOUBLE BED</h4>
-            <h1 class="big-title">Luxury Double Bed</h1>
-            <p class="filled-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex
-                ea commodo consequat. Duis aute irure dolor in reprehend
-                erit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.
-            </p>
-            <div class="offers-intro__offer-card-body-services">
-                <div class="offers-intro__offer-card-body-services-left">
-                    <div>
-                        <img src="../assets/images/offers_services/air_conditioner.png" alt="" /><span>Air Conditioner</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/breakfast.png" alt="" /><span>Breakfast</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/cleaning.png" alt="" /><span>Cleaning</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/grocery.png" alt="" /><span>Grocery</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/shop_near.png" alt="" /><span>Shop Near</span>
-                    </div>
-                </div>
-
-                <div class="offers-intro__offer-card-body-services-right">
-                    <div>
-                        <img src="../assets/images/offers_services/Vector.png" alt="" /><span>High Speed Wifi</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/kitchen.png" alt="" /><span>Kitchen</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/shower.png" alt="" /><span>Shower</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/single_bed.png" alt="" /><span>Single Bed</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/towels.png" alt="" /><span>Towels</span>
-                    </div>
-                </div>
-            </div>
-            <button class="offers-intro__button button button--beige">
-                BOOK NOW
-            </button>
-        </div>
-    </div>
-    <div class="offers-intro__offer-card">
-        <div class="offers-intro__offer-card-image">
-            <img src="../assets/images/hotelRooms/hotel_room14.jpg" alt="" />
-            <div class="offers-intro__offer-card-image-price-offer">
-                <div class="offers-intro__lined-price">
-                    <span class="price-amount">$500</span><span class="price-nigth">/Night</span>
-                </div>
-                <div class="offers-intro__red-price">
-                    <span class="price-amount">$345</span><span class="price-nigth">/Night</span>
-                </div>
-            </div>
-        </div>
-        <div class="offers-intro__offer-card-body">
-            <h4 class="subtitle-trigger">DOUBLE BED</h4>
-            <h1 class="big-title">Luxury Double Bed</h1>
-            <p class="filled-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis
-                nostrud exercitation ullamco laboris nisi ut aliquip ex
-                ea commodo consequat. Duis aute irure dolor in reprehend
-                erit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.
-            </p>
-            <div class="offers-intro__offer-card-body-services">
-                <div class="offers-intro__offer-card-body-services-left">
-                    <div>
-                        <img src="../assets/images/offers_services/air_conditioner.png" alt="" /><span>Air Conditioner</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/breakfast.png" alt="" /><span>Breakfast</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/cleaning.png" alt="" /><span>Cleaning</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/grocery.png" alt="" /><span>Grocery</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/shop_near.png" alt="" /><span>Shop Near</span>
-                    </div>
-                </div>
-
-                <div class="offers-intro__offer-card-body-services-right">
-                    <div>
-                        <img src="../assets/images/offers_services/Vector.png" alt="" /><span>High Speed Wifi</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/kitchen.png" alt="" /><span>Kitchen</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/shower.png" alt="" /><span>Shower</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/single_bed.png" alt="" /><span>Single Bed</span>
-                    </div>
-                    <div>
-                        <img src="../assets/images/offers_services/towels.png" alt="" /><span>Towels</span>
-                    </div>
-                </div>
-            </div>
-            <button class="offers-intro__button button button--beige">
-                BOOK NOW
-            </button>
-        </div>
-    </div>
+    @endforeach
 </main>
 
 <main class="offers-popular">

@@ -2686,6 +2686,9 @@ Common breakpoints:
     max-width: 1050px;
   }
 }
+.offers-intro__offer-card-body h4 {
+  text-transform: uppercase;
+}
 .offers-intro__offer-card-body h1 {
   margin-top: 20px;
 }
