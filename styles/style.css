@@ -1554,6 +1554,7 @@ Common breakpoints:
 }
 .home-rooms__services-slider-with-price img {
   width: 100%;
+  max-height: 500px;
   object-fit: cover;
 }
 .home-rooms__slider-button-next, .home-rooms__slider-button-prev {
