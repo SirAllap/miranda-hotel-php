@@ -26,10 +26,14 @@
     }
     p {
         color: $color-softGreyText;
-        margin-top: 20px;
+        margin-top: 10px;
+        height: 60px;
     }
     &__text-frist-span {
         font-size: 16px;
+    }
+    form {
+        display: inline;
     }
     &__text-second-span {
         :hover {
@@ -37,17 +41,18 @@
             color: white;
             border: 2px solid $color-softGreyText;
         }
-        a {
+        button {
             border: 2px solid $color-verySoftGrey;
             transition: 0.3s all;
             text-decoration: none;
             color: inherit;
             padding: 8px 12px;
+            font-size: 16px;
+            font-family: $arch-font;
+            font-weight: 700;
+            color: $color-grey-transparent;
+            background-color: transparent;
         }
-        font-size: 16px;
-        font-family: $arch-font;
-        font-weight: 700;
-        color: $color-verySoftGrey;
     }
 }
 .room-image {
