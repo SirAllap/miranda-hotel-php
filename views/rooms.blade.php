@@ -34,6 +34,7 @@
 						<img src="../assets/images/miranda_services_info.png" alt="an illustration of the room services" />
 					</div>
 					<div class="rooms-cards__text-container">
+
 						<h4 class="small-title">{{$room['room_type']}}</h4>
 						<p class="filled-text">
 							{{$room['description']}}
