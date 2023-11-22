@@ -57,7 +57,7 @@
 
 <main class="contact-intro__form">
 	<div class="contact-intro__form-wrapper">
-		<form action="../contact.php" method="post">
+		<form method="post">
 			<input id="input-name" name="name" placeholder="Your full name" type="text" required />
 			<input id="input-phone" name="phone" placeholder="Add phone number" type="text" required />
 			<input id="input-email" name="email" placeholder="Enter email address" type="text" required />

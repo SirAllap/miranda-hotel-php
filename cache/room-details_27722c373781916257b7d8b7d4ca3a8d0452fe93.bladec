@@ -35,10 +35,20 @@
 	</div>
 	<div class="room-details-intro__rooms-details-availability">
  <p>Check Availability</p>
+ <form action="">
  <label for="">Check In</label>
- <input placeholder="Fri, 14th June 2020" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" />
+ <input class="room-details-intro__calendar-picker" placeholder="Fri, 14th June 2020" type="date" onfocus="(this.type='date')" onblur="(this.type='text')" required />
  <label for="">Check Out</label>
- <input placeholder="Sun, 16th June 2020" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" />
+ <input class="room-details-intro__calendar-picker" placeholder="Sun, 16th June 2020" type="date" onfocus="(this.type='date')" onblur="(this.type='text')" required />
+ <label for="">Full Name</label>
+ <input id="input-full-name" name="full-name" placeholder="Your full name" type="text" required />
+ <label for="">Email</label>
+ <input id="input-email" name="email" placeholder="Enter email address" type="text" required />
+ <label for="">Phone</label>
+ <input id="input-phone" name="phone" placeholder="Add phone number" type="text" required />
+ <label for="">Special Request</label>
+ <input id="input-special-request" name="special-request" placeholder="Enter subject" type="text" required />
+ </form>
  <button class="button button--beige button--auto">
  CHECK AVAILABILITY
  </button>
@@ -137,10 +147,26 @@
  <h4 class="small-title">Cancellation</h4>
  <hr />
  <p>
- Phasellus volutpat neque a tellus venenatis, a euismod augue
- facilisis. Fusce ut metus mattis, consequat metus nec,
- luctus lectus. Pellentesque orci quis hendrerit sed eu
- dolor. Cancel up to 14 days to get a full refund.
+ At Miranda, we understand that plans can change. To provide flexibility and peace of mind, we offer the following cancellation policy:
+ </p>
+ <br>
+ <p>
+ Cancellation Terms:
+ </p>
+ <br>
+ <p>
+ - Guests can receive a full refund if the reservation is canceled up to 14 days before the scheduled date.
+ </p>
+ <p>
+ - Cancellations made within 14 days of the scheduled date may not be eligible for a refund.
+ </p>
+ <br>
+ <p>
+ We appreciate your understanding and look forward to hosting you. If you have any questions or need assistance, please feel free to contact our customer support team.
+ </p>
+ <br>
+ <p>
+ Thank you for choosing Hotel Miranda.
  </p>
 	</div>
 </main>
