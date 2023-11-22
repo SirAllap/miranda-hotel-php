@@ -5,8 +5,6 @@ require_once('setup.php');
 //DB config
 require_once('config.php');
 
-$confirmation = false;
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["phone"]) && isset($_POST["subject"]) && isset($_POST["message"])) {
         $full_name = htmlspecialchars($_POST["name"]);
