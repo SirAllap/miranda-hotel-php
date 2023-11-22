@@ -36,23 +36,23 @@
 	</div>
 	<div class="room-details-intro__rooms-details-availability">
 		<p>Check Availability</p>
-		<form action="">
+		<form action="../room-details.php" method="post">
 			<label for="">Check In</label>
-			<input class="room-details-intro__calendar-picker" type="date" value="{{$start}}" required />
+			<input name="trip-start" class=" room-details-intro__calendar-picker" type="date" value="{{$start}}" required />
 			<label for="">Check Out</label>
-			<input class="room-details-intro__calendar-picker" type="date" value="{{$end}}" required />
+			<input name="trip-end" class="room-details-intro__calendar-picker" type="date" value="{{$end}}" required />
 			<label for="">Full Name</label>
-			<input id="input-details-name" name="full-name" placeholder="Your full name" type="text" required />
+			<input name="name" id="input-details-name" name="full-name" placeholder="Your full name" type="text" required />
 			<label for="">Email</label>
-			<input id="input-details-email" name="email" placeholder="Enter email address" type="text" required />
+			<input name="email" id="input-details-email" name="email" placeholder="Enter email address" type="text" required />
 			<label for="">Phone</label>
-			<input id="input-details-phone" name="phone" placeholder="Add phone number" type="text" required />
+			<input name="phone" id="input-details-phone" name="phone" placeholder="Add phone number" type="text" required />
 			<label for="">Special Request</label>
-			<input id="input-details-special-request" name="special-request" placeholder="Enter subject" type="text" required />
+			<input name="special-request" id="input-details-special-request" placeholder="Enter subject" type="text" required />
+			<button type="submit" class="button button--beige button--auto">
+				BOOK NOW!!!
+			</button>
 		</form>
-		<button class="button button--beige button--auto">
-			CHECK AVAILABILITY
-		</button>
 		<div class="room-details-intro__body-text">
 			<p>
 				Experience the pinnacle of luxury in our exquisite hotel
