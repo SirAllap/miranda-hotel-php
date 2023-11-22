@@ -1,7 +1,3 @@
-<?php
-$confirmation = false;
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -172,11 +168,10 @@ $confirmation = false;
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script type="module" src="../index.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-
 @if ($confirmation)
 <script>
     Toastify({
-        text: "{{$confirmation['message']}}",
+        text: "{{$confirmation}}",
         className: "info",
         style: {
             background: "#bead8e",
