@@ -4,7 +4,7 @@ session_start();
 require_once('setup.php');
 //DB config
 require_once('config.php');
-
+$confirmation = '';
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["phone"]) && isset($_POST["subject"]) && isset($_POST["message"])) {
         $full_name = htmlspecialchars($_POST["name"]);
@@ -19,7 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->bind_param("sssss", $full_name, $email, $phone_number, $subject_of_review, $review_body);
 
         if ($stmt->execute()) {
-            $_SESSION['confirmation'] = ['message' => 'Form sent!'];
+            // $_SESSION['confirmation'] = ['message' => 'Form sent!'];
+            $confirmation = 'Form sent!';
         } else {
             $confirmation = [null, $stmt->error];
             $_SESSION['confirmation'] = ['message' => 'Form not sent!', 'error' => true];
@@ -31,7 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-echo $blade->run('contact', ['confirmation' =>  $_SESSION['confirmation'] ?? null, 'error' => false]);
-$_SESSION['confirmation'] = null;
-$conn->close();
+echo $blade->run('contact', ['confirmation' =>  $confirmation]);
 session_destroy();
+$conn->close();
