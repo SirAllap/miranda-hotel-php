@@ -40,7 +40,7 @@ window.addEventListener('load', () => {
         header.classList.remove('header--hide-on-top')
     if (window.innerWidth >= 1200) {
         runDesktopView()
-    } else if (window.innerWidth >= 720) {
+    } else if (window.innerWidth >= 1000) {
         destroyRestaurantSwiper()
     } else {
         runDevicesView()
@@ -49,9 +49,9 @@ window.addEventListener('load', () => {
 
 window.addEventListener('resize', () => {
     if (window.innerWidth >= 1200) {
-        runDesktopView()
-        destroyFeaturesSwiper()
-    } else if (window.innerWidth >= 720) {
+        runDesktopView(),
+            destroyFeaturesSwiper()
+    } else if (window.innerWidth >= 1000) {
         destroyRestaurantSwiper()
     }
     else {
@@ -165,14 +165,19 @@ let swiperFeatures = initializeSwiper('.swiper-features', {
 // Restaurant Photos Swiper
 let swiperRestaurantPhotos = initializeSwiper('.swiper-restaurant-photos', {
     direction: 'horizontal',
-    loop: false,
+    loop: true,
+    spaceBetween: 20,
+    slidesPerView: 1,
     pagination: {
         el: ".swiper-pagination",
     },
     breakpoints: {
+        720: {
+            slidesPerView: 2,
+        },
         1000: {
             slidesPerView: 3,
-        },
+        }
     },
 })
 
