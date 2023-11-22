@@ -27,10 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         $special_request = htmlspecialchars($_POST["special-request"]);
         $room_id = $_SESSION['room_id'];
 
-        $sql = "INSERT INTO booking (guest, phone_number, order_date, check_in, check_out, special_request, status, room_id) VALUES (?, ?, CURDATE(), ?, ?, ?, 'Check In', ?);";
+        $sql = "INSERT INTO booking (guest, phone_number, email, order_date, check_in, check_out, special_request, status, room_id) VALUES (?, ?, ?, CURDATE(), ?, ?, ?, 'Check In', ?);";
 
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssssss", $full_name, $phone_number, $trip_start, $trip_end, $special_request, $room_id);
+        $stmt->bind_param("sssssss", $full_name, $phone_number, $email, $trip_start, $trip_end, $special_request, $room_id);
 
         if ($stmt->execute()) {
             $confirmation = 'Thank you for your request. We have received it correctly. Someone from our Team will get back to you very soon.';
