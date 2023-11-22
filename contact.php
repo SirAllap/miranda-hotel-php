@@ -34,3 +34,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 echo $blade->run('contact', ['confirmation' =>  $_SESSION['confirmation'] ?? null, 'error' => false]);
 $_SESSION['confirmation'] = null;
 $conn->close();
+session_destroy();
