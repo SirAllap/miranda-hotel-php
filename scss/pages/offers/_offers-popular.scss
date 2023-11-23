@@ -34,6 +34,7 @@
         height: 885px;
     }
     &__card {
+        height: 450px !important;
         background-color: $color-white;
         img {
             width: 100%;
@@ -82,7 +83,14 @@
     }
 }
 .swiper-custom-buttons {
+    top: 37% !important;
     @include desktop {
-        scale: 1.6;
+        scale: 1.3;
+    }
+    &.next {
+        margin-right: 5px !important;
+    }
+    &.prev {
+        margin-left: 5px !important;
     }
 }
