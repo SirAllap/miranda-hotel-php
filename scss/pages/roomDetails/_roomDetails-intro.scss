@@ -397,3 +397,35 @@ hr {
     background-position-y: 50%;
     background-position-x: 95%;
 }
+
+.checkin-info {
+    text-align: center;
+    @include desktop {
+        h1 {
+            margin: 20px 0 20px 0;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        margin-bottom: -100px;
+    }
+}
+.unavailable-booking {
+    text-align: center;
+    h1 {
+        padding: 20px;
+        font-size: 36px;
+        margin: 50px 0;
+    }
+    @include desktop {
+        h1 {
+            padding: 50px 50px 0px 50px;
+            font-size: 56px;
+        }
+    }
+    button {
+        margin: 0 auto;
+        padding: 0 15px 0 15px;
+        margin-bottom: 80px;
+    }
+}
