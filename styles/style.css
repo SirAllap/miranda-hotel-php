@@ -3611,6 +3611,41 @@ hr {
   background-position-x: 95%;
 }
 
+.checkin-info {
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .checkin-info {
+    margin-bottom: -100px;
+  }
+  .checkin-info h1 {
+    margin: 20px 0 20px 0;
+  }
+  .checkin-info h2 {
+    margin-bottom: 10px;
+  }
+}
+
+.unavailable-booking {
+  text-align: center;
+}
+.unavailable-booking h1 {
+  padding: 20px;
+  font-size: 36px;
+  margin: 50px 0;
+}
+@media (min-width: 1000px) {
+  .unavailable-booking h1 {
+    padding: 50px 50px 0px 50px;
+    font-size: 56px;
+  }
+}
+.unavailable-booking button {
+  margin: 0 auto;
+  padding: 0 15px 0 15px;
+  margin-bottom: 80px;
+}
+
 .room-details-cards {
   margin-bottom: 40px;
   text-align: center;
