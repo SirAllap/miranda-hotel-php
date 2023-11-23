@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         FROM room r
         INNER JOIN photo p ON r.id = p.room_id
         INNER JOIN booking b ON r.id = b.room_id
-        WHERE r.id = 46
+        WHERE r.id = $id
         AND NOT EXISTS (
             SELECT 1
             FROM booking b_sub
