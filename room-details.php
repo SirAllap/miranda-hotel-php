@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 
         $sql = "SELECT r.*, p.URL FROM room r INNER JOIN photo p ON r.id = p.room_id WHERE r.id = $id;";
 
-        $sqlRelatedRooms = "SELECT r.*, p.URL FROM room r LEFT JOIN photo p ON r.id = p.room_id WHERE r.status = true LIMIT 10;";
+        $sqlRelatedRooms = "SELECT r.*, p.URL FROM room r LEFT JOIN photo p ON r.id = p.room_id WHERE r.status = true AND r.discount = 0 LIMIT 10;";
     }
     $result = $conn->query($sql);
     $room = $result->fetch_assoc();
