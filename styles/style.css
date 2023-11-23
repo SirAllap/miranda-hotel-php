@@ -1092,6 +1092,18 @@ Common breakpoints:
   border: 1px transparent solid;
   outline: 1px solid rgba(255, 255, 255, 0.33);
 }
+.home-intro__button:last-child:hover {
+  background-color: rgba(190, 173, 142, 0.3058823529);
+  transform: scale(1.029);
+}
+.home-intro__button:first-child {
+  border: 1px transparent solid;
+  outline: 1px solid rgba(255, 255, 255, 0.33);
+}
+.home-intro__button:first-child:hover {
+  background-color: rgba(190, 173, 142, 0.3058823529);
+  transform: scale(1.006);
+}
 @media (min-width: 720px) {
   .home-intro__button--left {
     margin: 0 30px 0 0;
@@ -2662,7 +2674,7 @@ Common breakpoints:
   font-size: 100%;
 }
 .offers-intro__offer-card-body {
-  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
   padding: 20px;
   margin-top: 20px;
 }
@@ -2672,18 +2684,13 @@ Common breakpoints:
     top: -60px;
     border-top: 6px solid #bead8e;
     background-color: #fff;
-    box-shadow: none;
+    margin: 0 auto;
+    max-width: 1050px;
   }
 }
 @media (min-width: 1000px) and (min-width: 1000px) {
   .offers-intro__offer-card-body {
     padding: 40px;
-  }
-}
-@media (min-width: 1000px) {
-  .offers-intro__offer-card-body {
-    margin: 0 auto;
-    max-width: 1050px;
   }
 }
 .offers-intro__offer-card-body h4 {

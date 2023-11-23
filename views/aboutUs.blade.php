@@ -51,9 +51,11 @@
 				unrivaled flavors and impeccable service, embracing the
 				epitome of opulence.
 			</p>
-			<button class="aboutus-intro__restaurant-button button button--beige">
-				TAKE A TOUR
-			</button>
+			<a href="../index.php#video" style="text-decoration: none;">
+				<button class="aboutus-intro__restaurant-button button button--beige">
+					TAKE A TOUR
+				</button>
+			</a>
 		</section>
 	</div>
 </main>
