@@ -656,6 +656,14 @@ Common breakpoints:
   font-weight: 700;
 }
 
+.discounted-price {
+  color: #de5777 !important;
+  font-family: "Archivo";
+  font-size: 32px;
+  line-height: 43px;
+  font-weight: 700;
+}
+
 .price-nigth-small {
   color: #bead8e;
   font-family: "Archivo";

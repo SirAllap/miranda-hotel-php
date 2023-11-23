@@ -28,9 +28,18 @@
 	<div class="room-details-intro__room-details-wrapper">
 		<div class="room-details-intro__room-details-text-wrapper">
 			<h4 class="subtitle-trigger">{{ $room['room_type'] }}</h4>
-			<h1 class="regular-title">Luxury Double Bed</h1>
+			<h1 class="regular-title">Luxury {{ $room['room_type'] }}</h1>
+			@if($room['discount'])
+			@php
+			$discountedPrice = intval($room['price'] - $room['price'] * $room['discount'] / 100);
+			@endphp
+			<span class="discounted-price">${{ $discountedPrice }}</span>
+			<span class="price-nigth-small discounted-price">/Night</span>
+			@else
 			<span class="price-amount-small">${{ $room['price'] }}</span>
 			<span class="price-nigth-small">/Night</span>
+			@endif
+
 		</div>
 		<img src="{{ $room['URL'] }}" alt="a photo of a hotel room" />
 	</div>
