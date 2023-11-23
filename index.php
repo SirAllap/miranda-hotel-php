@@ -1,4 +1,5 @@
 <?php
+session_start();
 //BladeTemplate
 require_once('setup.php');
 //DB config
@@ -11,3 +12,4 @@ $rooms = $result->fetch_all(MYSQLI_ASSOC);
 
 echo $blade->run('index', ['rooms' => $rooms]);
 $conn->close();
+session_destroy();
