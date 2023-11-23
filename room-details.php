@@ -40,12 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 
         if ($stmt->execute()) {
             $confirmation = 'Thank you for your request. We have received it correctly. Someone from our Team will get back to you very soon.';
-
             echo $blade->run('index', ['confirmation' =>  $confirmation]);
             session_destroy();
         } else {
-            $confirmation = [null, $stmt->error];
-            $_SESSION['confirmation'] = ['message' => 'Form not sent!', 'error' => true];
+            $confirmation = 'Form not sent! | Error: ' . $stmt->error;
         }
 
         $stmt->close();
