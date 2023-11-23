@@ -2622,12 +2622,12 @@ Common breakpoints:
 .offers-intro__offer-card-image img {
   object-fit: cover;
   width: 100%;
-  height: 200px;
+  max-height: 450px;
   opacity: 0.8;
 }
 @media (min-width: 1000px) {
   .offers-intro__offer-card-image img {
-    height: 570px;
+    max-height: 570px;
   }
 }
 .offers-intro__offer-card-image-price-offer {
@@ -2676,7 +2676,7 @@ Common breakpoints:
 .offers-intro__offer-card-body {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: -80px;
 }
 @media (min-width: 1000px) {
   .offers-intro__offer-card-body {
@@ -2822,6 +2822,9 @@ Common breakpoints:
 }
 .offers-popular__text-container {
   margin: 0px 20px 40px 20px;
+}
+.offers-popular__text-container form {
+  display: inline;
 }
 .offers-popular p {
   color: #777777;
@@ -3631,5 +3634,13 @@ hr {
   color: #bdbdbd;
 }
 .room-details-cards h4 {
-  text-align: left;
+  text-align: center;
+}
+
+.swiper-related-rooms-button-next {
+  top: 25% !important;
+}
+
+.swiper-related-rooms-button-prev {
+  top: 25% !important;
 }
