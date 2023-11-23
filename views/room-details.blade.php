@@ -86,20 +86,7 @@
 		@endif
 		<div class="room-details-intro__body-text">
 			<p>
-				Experience the pinnacle of luxury in our exquisite hotel
-				room. As you step inside, you'll be enveloped in an
-				ambiance of elegance and refinement. Our room seamlessly
-				combines modern sophistication with timeless charm,
-				featuring luxurious fabrics, rich colors, and
-				custom-made furnishings. Take in breathtaking views
-				through large windows, which frame either a captivating
-				cityscape or serene natural scenery. Drift into blissful
-				slumber on a plush king-size bed adorned with
-				high-quality linens. The marble en-suite bathroom offers
-				a tranquil escape, complete with a deep soaking tub and
-				a rejuvenating rainfall shower. With personalized
-				concierge service and top-notch in-room amenities, your
-				stay becomes a truly extraordinary experience.
+				{{$room['description']}}
 			</p>
 		</div>
 	</div>
@@ -178,8 +165,8 @@
 		<h4 class="small-title">David P. Robaina</h4>
 		<h5 class="subtitle-trigger">FOUNDER, QUX CO.</h5>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-			sed do eiusmod tempor incididunt ut labore et dolore.
+			David P. Robaina, the visionary behind QUX CO., leads with passion and innovation. His commitment to excellence
+			drives our team to new heights.
 		</p>
 	</div>
 </main>
@@ -228,7 +215,7 @@
 					<div class="offers-popular__text-container">
 						<h4 class="small-title">{{$room['room_type']}}</h4>
 						<p class="filled-text">
-							{{$room['description']}}
+							{{$room['quick_description']}}
 						</p>
 						<span class="offers-popular__text-frist-span price-amount">${{$room['price']}}/Night</span>&nbsp&nbsp&nbsp&nbsp
 						<form action="../room-details.php" method="get"><span class="rooms-cards__text-second-span">
