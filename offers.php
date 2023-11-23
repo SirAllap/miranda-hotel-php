@@ -4,11 +4,14 @@ require_once('setup.php');
 //DB config
 require_once('config.php');
 
-$sql = "SELECT r.*, p.URL FROM room r INNER JOIN photo p ON r.id = p.room_id WHERE r.discount > 0 LIMIT 5;";
+$sqlWithDiscounts = "SELECT r.*, p.URL FROM room r INNER JOIN photo p ON r.id = p.room_id WHERE r.status = true AND r.discount > 0 LIMIT 5;";
+$sqlWithoutDiscounts = "SELECT r.*, p.URL FROM room r INNER JOIN photo p ON r.id = p.room_id WHERE r.status = true AND r.discount = 0;";
 
-$result = $conn->query($sql);
+$resultWithDiscounts = $conn->query($sqlWithDiscounts);
+$resultWithoutDiscounts = $conn->query($sqlWithoutDiscounts);
 
-$rooms = $result->fetch_all(MYSQLI_ASSOC);
+$roomsWithDiscounts = $resultWithDiscounts->fetch_all(MYSQLI_ASSOC);
+$roomsWithoutDiscounts = $resultWithoutDiscounts->fetch_all(MYSQLI_ASSOC);
 
-echo $blade->run('offers', ['rooms' => $rooms]);
+echo $blade->run('offers', ['roomsWithDiscounts' => $roomsWithDiscounts, 'roomsWithoutDiscounts' => $roomsWithoutDiscounts]);
 $conn->close();
