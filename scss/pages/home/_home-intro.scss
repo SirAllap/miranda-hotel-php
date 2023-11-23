@@ -151,6 +151,18 @@
         &:last-child {
             border: 1px transparent solid;
             outline: 1px solid rgba($color: #ffffff, $alpha: 0.33);
+            &:hover {
+                background-color: #bead8e4e;
+                transform: scale(1.029);
+            }
+        }
+        &:first-child {
+            border: 1px transparent solid;
+            outline: 1px solid rgba($color: #ffffff, $alpha: 0.33);
+            &:hover {
+                background-color: #bead8e4e;
+                transform: scale(1.006);
+            }
         }
         @include md {
             &--left {
