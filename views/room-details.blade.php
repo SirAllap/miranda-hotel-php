@@ -24,7 +24,14 @@
 </main>
 
 @if(isset($room))
-<main class="room-details-intro__room-details">
+@if(isset($start) && isset($end))
+<div class="checkin-info">
+	<h1 class="regular-new-title">Room availablity checked for the selected dates:</h1>
+	<h2 class="regular-new-title">Check in: {{ $start }}</h2>
+	<h2 class="regular-new-title">Check out: {{ $end }} </h2>
+</div>
+@endif
+<main class=" room-details-intro__room-details">
 	<div class="room-details-intro__room-details-wrapper">
 		<div class="room-details-intro__room-details-text-wrapper">
 			<h4 class="subtitle-trigger">{{ $room['room_type'] }}</h4>
@@ -44,8 +51,22 @@
 		<img src="{{ $room['URL'] }}" alt="a photo of a hotel room" />
 	</div>
 	<div class="room-details-intro__rooms-details-availability">
+
+		@if(!isset($start) && !isset($end))
 		<p>Check Availability</p>
-		<form action="../room-details.php" method="post">
+		<form action="#" method="get">
+			<label for="">Check In</label>
+			<input name="trip-start" class=" room-details-intro__calendar-picker" type="date" value="{{$start}}" required />
+			<label for="">Check Out</label>
+			<input name="trip-end" class="room-details-intro__calendar-picker" type="date" value="{{$end}}" required />
+			<input type="hidden" name="room_id" value="{{$room['id']}}" />
+			<button type="submit" class="button button--beige button--auto">
+				Check Availability
+			</button>
+		</form>
+		@else
+		<form action="" method="post">
+			<p>Check Availability</p>
 			<label for="">Check In</label>
 			<input name="trip-start" class=" room-details-intro__calendar-picker" type="date" value="{{$start}}" required />
 			<label for="">Check Out</label>
@@ -59,9 +80,10 @@
 			<label for="">Special Request</label>
 			<input name="special-request" id="input-details-special-request" placeholder="Enter subject" type="text" required />
 			<button type="submit" class="button button--beige button--auto">
-				BOOK NOW!!!
+				Book Now!
 			</button>
 		</form>
+		@endif
 		<div class="room-details-intro__body-text">
 			<p>
 				Experience the pinnacle of luxury in our exquisite hotel
@@ -82,6 +104,15 @@
 		</div>
 	</div>
 </main>
+@else
+<div class="unavailable-booking">
+	<h1 class="big-title">Unfortunately, the room you desire is not available for the selected dates!</h1>
+	<a href="/rooms.php" style="text-decoration: none;">
+		<button class="button button--beige button--auto">
+			Go back to Rooms
+		</button>
+	</a>
+</div>
 @endif
 
 <main class="room-details-intro__amenities">
