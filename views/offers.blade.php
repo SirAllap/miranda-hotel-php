@@ -24,7 +24,7 @@
 </main>
 
 <main class="offers-intro__cards">
-    @foreach ($rooms as $room)
+    @foreach ($roomsWithDiscounts as $room)
     <div class="offers-intro__offer-card">
         <div class="offers-intro__offer-card-image">
             <img src="{{$room['URL']}}" alt="" />
@@ -100,107 +100,24 @@
     <h1 class="regular-title">Popular Rooms</h1>
     <div class="swiper swiper-rooms-offer">
         <div class="swiper-wrapper">
+            @foreach ($roomsWithoutDiscounts as $room)
             <div class="offers-popular__card swiper-slide">
-                <img src="../assets/images/hotelRooms/hotel_room13.jpg" alt="a picture of a hotel room" />
+                <img src="{{$room['URL']}}" alt="a picture of a hotel room" />
                 <div class="offers-popular__card-service-info">
                     <img src="../assets/images/miranda_services_info.png" alt="an illustration of the room services" />
                 </div>
                 <div class="offers-popular__text-container">
-                    <h4 class="small-title">Minimal Duplex Room</h4>
+                    <h4 class="small-title">Minimal {{$room['room_type']}}</h4>
                     <p class="filled-text">
-                        Lorem ipsum dolor sit amet, consectetur adipi
-                        sicing elit, sed do eiusmod tempor.
+                        {{$room['description']}}
                     </p>
-                    <span class="offers-popular__text-frist-span price-amount">$345/Night</span>&nbsp&nbsp&nbsp&nbsp<span class="offers-popular__text-second-span"><a href="/room-details.php">Booking Now</a></span>
+                    <span class="offers-popular__text-frist-span price-amount">${{$room['price']}}/Night</span>&nbsp&nbsp&nbsp&nbsp<span class="offers-popular__text-second-span"><a href="../rooms.php">Check Availablity</a></span>
                 </div>
             </div>
-            <div class="offers-popular__card swiper-slide">
-                <img src="../assets/images/hotelRooms/hotel_room1.jpg" alt="a picture of a hotel room" />
-                <div class="offers-popular__card-service-info">
-                    <img src="../assets/images/miranda_services_info.png" alt="an illustration of the room services" />
-                </div>
-                <div class="offers-popular__text-container">
-                    <h4 class="small-title">Minimal Duplex Room</h4>
-                    <p class="filled-text">
-                        Lorem ipsum dolor sit amet, consectetur adipi
-                        sicing elit, sed do eiusmod tempor.
-                    </p>
-                    <span class="offers-popular__text-frist-span price-amount">$345/Night</span>&nbsp&nbsp&nbsp&nbsp<span class="offers-popular__text-second-span"><a href="/room-details.php">Booking Now</a></span>
-                </div>
-            </div>
-            <div class="offers-popular__card swiper-slide">
-                <img src="../assets/images/hotelRooms/hotel_room11.jpg" alt="a picture of a hotel room" />
-                <div class="offers-popular__card-service-info">
-                    <img src="../assets/images/miranda_services_info.png" alt="an illustration of the room services" />
-                </div>
-                <div class="offers-popular__text-container">
-                    <h4 class="small-title">Minimal Duplex Room</h4>
-                    <p class="filled-text">
-                        Lorem ipsum dolor sit amet, consectetur adipi
-                        sicing elit, sed do eiusmod tempor.
-                    </p>
-                    <span class="offers-popular__text-frist-span price-amount">$345/Night</span>&nbsp&nbsp&nbsp&nbsp<span class="offers-popular__text-second-span"><a href="/room-details.php">Booking Now</a></span>
-                </div>
-            </div>
-            <div class="offers-popular__card swiper-slide">
-                <img src="../assets/images/hotelRooms/hotel_room10.jpg" alt="a picture of a hotel room" />
-                <div class="offers-popular__card-service-info">
-                    <img src="../assets/images/miranda_services_info.png" alt="an illustration of the room services" />
-                </div>
-                <div class="offers-popular__text-container">
-                    <h4 class="small-title">Minimal Duplex Room</h4>
-                    <p class="filled-text">
-                        Lorem ipsum dolor sit amet, consectetur adipi
-                        sicing elit, sed do eiusmod tempor.
-                    </p>
-                    <span class="offers-popular__text-frist-span price-amount">$345/Night</span>&nbsp&nbsp&nbsp&nbsp<span class="offers-popular__text-second-span"><a href="/room-details.php">Booking Now</a></span>
-                </div>
-            </div>
-            <div class="offers-popular__card swiper-slide">
-                <img src="../assets/images/hotelRooms/hotel_room4.jpg" alt="a picture of a hotel room" />
-                <div class="offers-popular__card-service-info">
-                    <img src="../assets/images/miranda_services_info.png" alt="an illustration of the room services" />
-                </div>
-                <div class="offers-popular__text-container">
-                    <h4 class="small-title">Minimal Duplex Room</h4>
-                    <p class="filled-text">
-                        Lorem ipsum dolor sit amet, consectetur adipi
-                        sicing elit, sed do eiusmod tempor.
-                    </p>
-                    <span class="offers-popular__text-frist-span price-amount">$345/Night</span>&nbsp&nbsp&nbsp&nbsp<span class="offers-popular__text-second-span"><a href="/room-details.php">Booking Now</a></span>
-                </div>
-            </div>
-            <div class="offers-popular__card swiper-slide">
-                <img src="../assets/images/hotelRooms/hotel_room7.jpg" alt="a picture of a hotel room" />
-                <div class="offers-popular__card-service-info">
-                    <img src="../assets/images/miranda_services_info.png" alt="an illustration of the room services" />
-                </div>
-                <div class="offers-popular__text-container">
-                    <h4 class="small-title">Minimal Duplex Room</h4>
-                    <p class="filled-text">
-                        Lorem ipsum dolor sit amet, consectetur adipi
-                        sicing elit, sed do eiusmod tempor.
-                    </p>
-                    <span class="offers-popular__text-frist-span price-amount">$345/Night</span>&nbsp&nbsp&nbsp&nbsp<span class="offers-popular__text-second-span"><a href="/room-details.php">Booking Now</a></span>
-                </div>
-            </div>
-            <div class="offers-popular__card swiper-slide">
-                <img src="../assets/images/hotelRooms/hotel_room.jpg" alt="a picture of a hotel room" />
-                <div class="offers-popular__card-service-info">
-                    <img src="../assets/images/miranda_services_info.png" alt="an illustration of the room services" />
-                </div>
-                <div class="offers-popular__text-container">
-                    <h4 class="small-title">Minimal Duplex Room</h4>
-                    <p class="filled-text">
-                        Lorem ipsum dolor sit amet, consectetur adipi
-                        sicing elit, sed do eiusmod tempor.
-                    </p>
-                    <span class="offers-popular__text-frist-span price-amount">$345/Night</span>&nbsp&nbsp&nbsp&nbsp<span class="offers-popular__text-second-span"><a href="/room-details.php">Booking Now</a></span>
-                </div>
-            </div>
+            @endforeach
         </div>
-        <div class="swiper-button-next swiper-custom-buttons"></div>
-        <div class="swiper-button-prev swiper-custom-buttons"></div>
+        <div class="swiper-button-next swiper-custom-buttons next"></div>
+        <div class="swiper-button-prev swiper-custom-buttons prev"></div>
     </div>
 </main>
 

@@ -2813,6 +2813,7 @@ Common breakpoints:
   }
 }
 .offers-popular__card {
+  height: 450px !important;
   background-color: #ffffff;
 }
 .offers-popular__card img {
@@ -2861,10 +2862,19 @@ Common breakpoints:
   }
 }
 
+.swiper-custom-buttons {
+  top: 37% !important;
+}
 @media (min-width: 1000px) {
   .swiper-custom-buttons {
-    scale: 1.6;
+    scale: 1.3;
   }
+}
+.swiper-custom-buttons.next {
+  margin-right: 5px !important;
+}
+.swiper-custom-buttons.prev {
+  margin-left: 5px !important;
 }
 
 .contact-intro__head-section {
