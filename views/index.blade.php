@@ -133,7 +133,7 @@ $departure = $year . '-' . $month . '-' . $tomorrowDay;
 							{{$room['room_type']}}
 						</h1>
 						<h4 class="home-rooms__info-card-body filled-text">
-							{{$room['description']}}
+							{{$room['quick_description']}}
 						</h4>
 						<div class="home-rooms__info-card-price-amount-nigth">
 							<span class="home-rooms__info-card-price price-amount">${{$room['price']}}</span><span class="home-rooms__info-card-price price-nigth">/Night</span>
