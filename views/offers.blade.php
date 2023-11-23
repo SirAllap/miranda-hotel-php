@@ -109,7 +109,7 @@
                 <div class="offers-popular__text-container">
                     <h4 class="small-title">Minimal {{$room['room_type']}}</h4>
                     <p class="filled-text">
-                        {{$room['description']}}
+                        {{$room['quick_description']}}
                     </p>
                     <span class="offers-popular__text-frist-span price-amount">${{$room['price']}}/Night</span>&nbsp&nbsp&nbsp&nbsp<span class="offers-popular__text-second-span"><a href="../rooms.php">Check Availablity</a></span>
                 </div>
