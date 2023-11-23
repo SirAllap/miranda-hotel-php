@@ -13,10 +13,16 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         $_SESSION['room_id'] = $id;
 
         $sql = "SELECT r.*, p.URL FROM room r INNER JOIN photo p ON r.id = p.room_id WHERE r.id = $id;";
+
+        $sqlRelatedRooms = "SELECT r.*, p.URL FROM room r LEFT JOIN photo p ON r.id = p.room_id WHERE r.status = true LIMIT 10;";
     }
     $result = $conn->query($sql);
     $room = $result->fetch_assoc();
-    echo $blade->run('room-details', ['room' => $room, 'start' => $start, 'end' => $end]);
+
+    $resultRelatedRooms = $conn->query($sqlRelatedRooms);
+    $rooms = $resultRelatedRooms->fetch_all(MYSQLI_ASSOC);
+
+    echo $blade->run('room-details', ['room' => $room, 'rooms' => $rooms, 'start' => $start, 'end' => $end]);
 } else if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST["trip-start"]) && isset($_POST["trip-end"]) && isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["phone"]) && isset($_POST["special-request"])) {
         $trip_start = htmlspecialchars($_POST["trip-start"]);
