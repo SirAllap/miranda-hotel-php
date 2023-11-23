@@ -126,20 +126,17 @@
         }
     }
     &__offer-card-body {
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+        padding: 20px;
+        margin-top: 20px;
         @include desktop {
             position: relative;
             top: -60px;
             border-top: 6px solid $color-beish;
             background-color: #fff;
-            box-shadow: none;
             @include desktop {
                 padding: 40px;
             }
-        }
-        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-        padding: 20px;
-        margin-top: 20px;
-        @include desktop {
             margin: 0 auto;
             max-width: 1050px;
         }
