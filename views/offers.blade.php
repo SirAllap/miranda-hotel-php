@@ -27,7 +27,7 @@
     @foreach ($rooms as $room)
     <div class="offers-intro__offer-card">
         <div class="offers-intro__offer-card-image">
-            <img src="../assets/images/hotelRooms/hotel_room13.jpg" alt="" />
+            <img src="{{$room['URL']}}" alt="" />
             <div class="offers-intro__offer-card-image-price-offer">
                 <div class="offers-intro__lined-price">
                     <span class="price-amount">${{$room['price']}}</span><span class="price-nigth">/Night</span>
@@ -36,7 +36,8 @@
                     @php
                     $discountedPrice = intval($room['price'] - $room['price'] * $room['discount'] / 100);
                     @endphp
-                    <span class="price-amount">${{ $discountedPrice }}</span><span class="price-nigth">/Night</span>
+                    <span class="price-amount">${{ $discountedPrice }}</span>
+                    <span class="price-nigth">/Night</span>
                 </div>
             </div>
         </div>
@@ -83,9 +84,12 @@
                     </div>
                 </div>
             </div>
-            <button class="offers-intro__button button button--beige">
-                BOOK NOW
-            </button>
+            <form action="../room-details.php" method="get">
+                <input type="hidden" name="room_id" value="{{$room['id']}}" />
+                <button type="submit" class="offers-intro__button button button--beige">
+                    BOOK NOW
+                </button>
+            </form>
         </div>
     </div>
     @endforeach
