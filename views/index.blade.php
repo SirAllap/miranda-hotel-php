@@ -25,12 +25,16 @@ $departure = $year . '-' . $month . '-' . $tomorrowDay;
 			</h1>
 		</section>
 		<section class="home-intro__button-section">
-			<button class="home-intro__button home-intro__button--left button button--beige">
-				TAKE A TOUR
-			</button>
-			<button class="home-intro__button button button--grey">
-				LEARN MORE
-			</button>
+			<a href="#video" style="text-decoration: none;">
+				<button class="home-intro__button home-intro__button--left button button--beige">
+					TAKE A TOUR
+				</button>
+			</a>
+			<a href="../aboutUs.php" style="text-decoration: none;">
+				<button class="home-intro__button button button--grey">
+					LEARN MORE
+				</button>
+			</a>
 		</section>
 	</div>
 
@@ -70,9 +74,11 @@ $departure = $year . '-' . $month . '-' . $tomorrowDay;
 				each moment truly exceptional. Welcome to a genuine
 				urban escape.
 			</p>
-			<button class="home-about__button button button--beige">
-				BOOK NOW
-			</button>
+			<a href="../offers.php" style="text-decoration: none;">
+				<button class="home-about__button button button--beige">
+					BOOK NOW
+				</button>
+			</a>
 		</div>
 	</div>
 	<div class="home-about__cards">
@@ -141,7 +147,7 @@ $departure = $year . '-' . $month . '-' . $tomorrowDay;
 		</div>
 	</div>
 
-	<div class="home-rooms__intro-video">
+	<div id="video" class="home-rooms__intro-video">
 		<section class="home-rooms__intro-video-text">
 			<h4 class="home-rooms__text new-subtitle-head-gold">
 				INTRO VIDEO
@@ -161,9 +167,11 @@ $departure = $year . '-' . $month . '-' . $tomorrowDay;
 				<iframe src="https://www.youtube-nocookie.com/embed/Bu3Doe45lcU?si=1rHPncx6fmoXVYtz&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 			</div>
 		</section>
-		<button class="home-rooms__intro-video-button button button--beige-no-animation">
-			BOOK NOW
-		</button>
+		<a href="../offers.php" style="text-decoration: none;">
+			<button class="home-rooms__intro-video-button button button--beige-no-animation">
+				BOOK NOW
+			</button>
+		</a>
 	</div>
 </main>
 
