@@ -109,49 +109,102 @@
 	<div class="room-details-intro__amenities-services">
  <div class="room-details-intro__amenities-services-left">
  <div>
- <img src="../assets/images/offers_services/air_conditioner.png" alt="" /><span>Air Conditioner</span>
+ <?php if(strpos($room['all_amenities'], 'Free Wifi') !== false): ?>
+ <img src="../assets/images/offers_services/Vector.png" alt="" />
+ <span>High Speed Wifi</span>
+ <?php endif; ?>
  </div>
  <div>
- <img src="../assets/images/offers_services/breakfast.png" alt="" /><span>Breakfast</span>
+ <?php if(strpos($room['all_amenities'], 'Kitchen') !== false): ?>
+ <img src="../assets/images/offers_services/kitchen.png" alt="" />
+ <span>Kitchen</span>
+ <?php endif; ?>
  </div>
+
  <div>
- <img src="../assets/images/offers_services/cleaning.png" alt="" /><span>Cleaning</span>
+ <?php if(strpos($room['all_amenities'], 'Shower') !== false): ?>
+ <img src="../assets/images/offers_services/shower.png" alt="" />
+ <span>Shower</span>
+ <?php endif; ?>
  </div>
+
  <div>
- <img src="../assets/images/offers_services/grocery.png" alt="" /><span>Grocery</span>
+ <?php if(strpos($room['all_amenities'], 'Single Bed') !== false): ?>
+ <img src="../assets/images/offers_services/single_bed.png" alt="" />
+ <span>Single Bed</span>
+ <?php endif; ?>
  </div>
+
  <div>
- <img src="../assets/images/offers_services/shop_near.png" alt="" /><span>Shop Near</span>
+ <?php if(strpos($room['all_amenities'], 'Towels') !== false): ?>
+ <img src="../assets/images/offers_services/towels.png" alt="" />
+ <span>Towels</span>
+ <?php endif; ?>
  </div>
+
  <div>
- <img src="../assets/images/offers_services/support.png" alt="" /><span>24/7 Online Support</span>
+ <?php if(strpos($room['all_amenities'], 'Strong Locker') !== false): ?>
+ <img src="../assets/images/offers_services/locker.png" alt="" />
+ <span>Strong Locker</span>
+ <?php endif; ?>
  </div>
+
  <div>
- <img src="../assets/images/offers_services/security.png" alt="" /><span>Smart Security</span>
+ <?php if(strpos($room['all_amenities'], 'Expert Team') !== false): ?>
+ <img src="../assets/images/offers_services/team.png" alt="" />
+ <span>Expert Team</span>
+ <?php endif; ?>
  </div>
  </div>
 
  <div class="room-details-intro__amenities-services-right">
  <div>
- <img src="../assets/images/offers_services/Vector.png" alt="" /><span>High Speed Wifi</span>
+ <?php if(strpos($room['all_amenities'], 'Air Conditioner') !== false): ?>
+ <img src="../assets/images/offers_services/air_conditioner.png" alt="" />
+ <span>Air Conditioner</span>
+ <?php endif; ?>
  </div>
+
  <div>
- <img src="../assets/images/offers_services/kitchen.png" alt="" /><span>Kitchen</span>
+ <?php if(strpos($room['all_amenities'], 'Breakfast') !== false): ?>
+ <img src="../assets/images/offers_services/breakfast.png" alt="" />
+ <span>Breakfast</span>
+ <?php endif; ?>
  </div>
+
  <div>
- <img src="../assets/images/offers_services/shower.png" alt="" /><span>Shower</span>
+ <?php if(strpos($room['all_amenities'], 'Cleaning') !== false): ?>
+ <img src="../assets/images/offers_services/cleaning.png" alt="" />
+ <span>Cleaning</span>
+ <?php endif; ?>
  </div>
+
  <div>
- <img src="../assets/images/offers_services/single_bed.png" alt="" /><span>Single Bed</span>
+ <?php if(strpos($room['all_amenities'], 'Grocery') !== false): ?>
+ <img src="../assets/images/offers_services/grocery.png" alt="" />
+ <span>Grocery</span>
+ <?php endif; ?>
  </div>
+
  <div>
- <img src="../assets/images/offers_services/towels.png" alt="" /><span>Towels</span>
+ <?php if(strpos($room['all_amenities'], 'Shop Near') !== false): ?>
+ <img src="../assets/images/offers_services/shop_near.png" alt="" />
+ <span>Shop Near</span>
+ <?php endif; ?>
  </div>
+
  <div>
- <img src="../assets/images/offers_services/locker.png" alt="" /><span>Strong Locker</span>
+ <?php if(strpos($room['all_amenities'], '24/7 Online Support') !== false): ?>
+ <img src="../assets/images/offers_services/support.png" alt="" />
+ <span>24/7 Online Support</span>
+ <?php endif; ?>
  </div>
+
  <div>
- <img src="../assets/images/offers_services/team.png" alt="" /><span>Expert Team</span>
+ <?php if(strpos($room['all_amenities'], 'Smart Security') !== false): ?>
+ <img src="../assets/images/offers_services/security.png" alt="" />
+ <span>Smart Security</span>
+ <?php endif; ?>
  </div>
  </div>
 	</div>
