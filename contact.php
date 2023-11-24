@@ -13,8 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $subject_of_review = htmlspecialchars($_POST["subject"]);
         $review_body = htmlspecialchars($_POST["message"]);
 
-        $sql = "INSERT INTO contact (full_name, email, phone_number, subject_of_review, review_body, date, status) 
-                VALUES (?, ?, ?, ?, ?, CURDATE(), true)";
+        $sql = "INSERT INTO contact (full_name, email, phone_number, subject_of_review, review_body) 
+                VALUES (?, ?, ?, ?, ?)";
 
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("sssss", $full_name, $email, $phone_number, $subject_of_review, $review_body);

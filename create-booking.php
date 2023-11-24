@@ -38,8 +38,8 @@ if (isset($_POST["trip-start"]) && isset($_POST["trip-end"]) && isset($_POST["na
 
     if ($stmt->execute()) {
         $stmt->free_result();
-        $sql = "INSERT INTO booking (guest, phone_number, email, order_date, check_in, check_out, special_request, status, room_id) 
-                VALUES (?, ?, ?, CURDATE(), ?, ?, ?, 'Check In', ?);";
+        $sql = "INSERT INTO booking (guest, phone_number, email, check_in, check_out, special_request, room_id) 
+                VALUES (?, ?, ? , ?, ?, ?, ?);";
 
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("sssssss", $full_name, $phone_number, $email, $trip_start, $trip_end, $special_request, $room_id);
