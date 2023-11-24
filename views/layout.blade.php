@@ -173,9 +173,14 @@
 <script>
     Toastify({
         text: "{{$confirmation}}",
-        className: "info",
+        duration: 3000,
+        gravity: "bottom",
+        position: "left",
         style: {
-            background: "#bead8e",
+            background: "{{$error}}" ? "#de5777" : "#bead8e",
+            padding: "30px 50px 30px 50px",
+            fontSize: "1.5rem",
+            fontWeight: "bold",
         }
     }).showToast();
 </script>

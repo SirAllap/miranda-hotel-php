@@ -55,7 +55,7 @@
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48363.48103000033!2d-74.02873812906013!3d40.74623987516722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258fda88cefb3%3A0x7f1e88758d210007!2sNew%20York%20City%20Hall!5e0!3m2!1sen!2ses!4v1695151891145!5m2!1sen!2ses" width="100%" height="200" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </main>
 
-<main class="contact-intro__form">
+<main class="contact-intro__form" id="contact-form">
 	<div class="contact-intro__form-wrapper">
  <form method="post">
  <input id="input-name" name="name" placeholder="Your full name" type="text" required />
@@ -63,7 +63,7 @@
  <input id="input-email" name="email" placeholder="Enter email address" type="text" required />
  <input id="input-subject" name="subject" placeholder="Enter subject" type="text" required />
  <div class="contact-intro__form-wrapper">
- <textarea name="message" placeholder="Enter message" id="input-messsage-body" cols="30" rows="10" required></textarea>
+ <textarea name="message" placeholder="Enter message" id="input-messsage-body" cols="30" rows="10"></textarea>
  </div>
  <button type="submit" class="contact-intro__form-button button button--beige button--auto">
  SEND
