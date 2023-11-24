@@ -22,5 +22,9 @@ $resultWithoutDiscounts = $conn->query($sqlWithoutDiscounts);
 $roomsWithDiscounts = $resultWithDiscounts->fetch_all(MYSQLI_ASSOC);
 $roomsWithoutDiscounts = $resultWithoutDiscounts->fetch_all(MYSQLI_ASSOC);
 
+foreach ($roomsWithDiscounts as &$room) {
+    $room['priceWithDiscount'] = intval($room['price'] - ($room['price'] * ($room['discount'] / 100)));
+}
+
 echo $blade->run('offers', ['roomsWithDiscounts' => $roomsWithDiscounts, 'roomsWithoutDiscounts' => $roomsWithoutDiscounts]);
 $conn->close();
