@@ -27,8 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
                     INNER JOIN booking b ON r.id = b.room_id
                 WHERE
                     r.id = $id
-                GROUP BY
-                    r.id, p.URL, b.check_in, b.check_out
                 AND NOT EXISTS (
                     SELECT 1
                     FROM booking b_sub
@@ -39,17 +37,15 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
                         OR (b_sub.check_in BETWEEN '$trip_start' AND '$trip_end')
                         OR (b_sub.check_out BETWEEN '$trip_start' AND '$trip_end')
                     )
-                );
+                )
+                GROUP BY
+                    r.id, p.URL, b.check_in, b.check_out;
                 ";
-
         $sqlRelatedRooms = "SELECT r.*, p.URL FROM room r LEFT JOIN photo p ON r.id = p.room_id WHERE r.status = true AND r.discount = 0 LIMIT 10;";
-
         $result = $conn->query($sql);
         $room = $result->fetch_assoc();
-
         $resultRelatedRooms = $conn->query($sqlRelatedRooms);
         $rooms = $resultRelatedRooms->fetch_all(MYSQLI_ASSOC);
-
         echo $blade->run('room-details', ['room' => $room, 'rooms' => $rooms, 'start' => $trip_start, 'end' => $trip_end]);
     } else if (isset($_GET["room_id"])) {
         isset($_SESSION['start']) ? $start = $_SESSION['start'] : $start = null;
