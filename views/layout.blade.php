@@ -48,7 +48,7 @@
         <div class="header__desktop-menu">
             <ul class="header__desktop-menu-list">
                 <li class="header__desktop-menu-list-item">
-                    <a class="item-link-about" href="/aboutUs.php">About Us</a>
+                    <a class="item-link-about" href="/about-us.php">About Us</a>
                 </li>
                 <li class="header__desktop-menu-list-item">
                     <a class="item-link-rooms" href="/rooms.php">Rooms</a>
@@ -70,7 +70,7 @@
     <section id="dropDown" class="mobile__drop-down-menu">
         <ul class="mobile__menu-list">
             <li class="mobile__menu-list-item">
-                <a href="/aboutUs.php">About Us</a>
+                <a href="/about-us.php">About Us</a>
             </li>
             <li class="mobile__menu-list-item">
                 <a href="/rooms.php">Rooms</a>
