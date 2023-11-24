@@ -91,16 +91,6 @@
 		</div>
 	</div>
 </main>
-@else
-<div class="unavailable-booking">
-	<h1 class="big-title">Unfortunately, the room you desire is not available for the selected dates!</h1>
-	<a href="/rooms.php" style="text-decoration: none;">
-		<button class="button button--beige button--auto">
-			Go back to Rooms
-		</button>
-	</a>
-</div>
-@endif
 
 <main class="room-details-intro__amenities">
 	<h4 class="small-title">Amenities</h4>
@@ -208,6 +198,17 @@
 		</div>
 	</div>
 </main>
+
+@else
+<div class="unavailable-booking">
+	<h1 class="big-title">Unfortunately, the room you desire is not available for the selected dates!</h1>
+	<a href="/rooms.php" style="text-decoration: none;">
+		<button class="button button--beige button--auto">
+			Go back to Rooms
+		</button>
+	</a>
+</div>
+@endif
 
 <main class="room-details-intro__founder-container">
 	<div class="room-details-intro__founder">
