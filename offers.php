@@ -8,12 +8,14 @@ $sqlWithDiscounts = "SELECT r.*, p.URL
                     FROM room r 
                     INNER JOIN photo p ON r.id = p.room_id 
                     WHERE r.status = true AND r.discount > 0 
+                    ORDER BY rand()
                     LIMIT 5;";
 
 $sqlWithoutDiscounts = "SELECT r.*, p.URL 
                         FROM room r 
                         INNER JOIN photo p ON r.id = p.room_id 
                         WHERE r.status = true 
+                        ORDER BY rand()
                         AND r.discount = 0;";
 
 $resultWithDiscounts = $conn->query($sqlWithDiscounts);
