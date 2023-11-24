@@ -1621,6 +1621,15 @@ Common breakpoints:
 .home-rooms__slider {
   position: relative;
 }
+.home-rooms__slider--swiper-slidepic {
+  height: 400px;
+  object-fit: cover;
+}
+@media (min-width: 1000px) {
+  .home-rooms__slider--swiper-slidepic {
+    height: 700px;
+  }
+}
 @media (min-width: 1000px) {
   .home-rooms__slider {
     height: 350px;
@@ -2462,6 +2471,7 @@ Common breakpoints:
 }
 .rooms-cards img {
   width: 100%;
+  object-fit: cover;
 }
 .rooms-cards__card-service-info img {
   z-index: 5;
@@ -2503,9 +2513,12 @@ Common breakpoints:
   background-color: transparent;
 }
 
+.room-image {
+  height: 400px;
+}
 @media (min-width: 1000px) {
   .room-image {
-    height: 300px;
+    height: 350px;
   }
 }
 
@@ -3612,6 +3625,7 @@ hr {
 }
 
 .checkin-info {
+  margin: 40px 0 20px 0;
   text-align: center;
 }
 @media (min-width: 1000px) {

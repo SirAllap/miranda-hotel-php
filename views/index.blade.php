@@ -116,7 +116,7 @@
 				@foreach ($rooms as $room)
 				<div class="home-rooms__card-container swiper-slide">
 					<img class="home-rooms__services-info" src="../assets/images/miranda_services_info.png" alt="a serie of icons representing room services" />
-					<img class=" home-rooms__slider--swiper-slidepic" src="{{$room['URL']}}" alt="" />
+					<img class="home-rooms__slider--swiper-slidepic" src="{{$room['URL']}}" alt="" />
 					<div class="home-rooms__slider-info-card">
 						<h1 class="home-rooms__info-card-title regular-title">
 							{{$room['room_type']}}
