@@ -57,6 +57,13 @@
         }
     }
     &__slider {
+        &--swiper-slidepic {
+            height: 400px;
+            object-fit: cover;
+            @include desktop {
+                height: 700px;
+            }
+        }
         position: relative;
         @include desktop {
             height: 350px;
