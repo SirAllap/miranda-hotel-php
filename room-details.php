@@ -5,8 +5,6 @@ require_once('view-setup.php');
 //DB config
 require_once('db-config.php');
 
-
-
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
     if (isset($_GET["room_id"]) && isset($_GET["trip-start"]) && isset($_GET["trip-end"])) {
         $id = htmlspecialchars($_GET["room_id"]);
@@ -50,8 +48,13 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 
         $result = $conn->query($sql);
         $room = $result->fetch_assoc();
+
+        if ($room['discount']) {
+            $room['priceWithDiscount'] = intval($room['price'] - ($room['price'] * ($room['discount'] / 100)));
+        }
         $resultRelatedRooms = $conn->query($sqlRelatedRooms);
         $rooms = $resultRelatedRooms->fetch_all(MYSQLI_ASSOC);
+
         echo $blade->run('room-details', ['room' => $room, 'rooms' => $rooms, 'start' => $trip_start, 'end' => $trip_end]);
     } else if (isset($_GET["room_id"])) {
         isset($_SESSION['start']) ? $start = $_SESSION['start'] : $start = null;
@@ -84,6 +87,11 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 
         $result = $conn->query($sql);
         $room = $result->fetch_assoc();
+
+        if ($room['discount']) {
+            $room['priceWithDiscount'] = intval($room['price'] - ($room['price'] * ($room['discount'] / 100)));
+        }
+
         $resultRelatedRooms = $conn->query($sqlRelatedRooms);
         $rooms = $resultRelatedRooms->fetch_all(MYSQLI_ASSOC);
         echo $blade->run('room-details', ['room' => $room, 'rooms' => $rooms, 'start' => $start, 'end' => $end]);
