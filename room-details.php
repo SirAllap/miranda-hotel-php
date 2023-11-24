@@ -39,11 +39,13 @@ if (isset($_GET["room_id"]) && isset($_GET["trip-start"]) && isset($_GET["trip-e
                     r.id, p.URL, b.check_in, b.check_out;
                 ";
     $sqlRelatedRooms = "SELECT r.*, p.URL 
-                            FROM room r 
-                            LEFT JOIN photo p ON r.id = p.room_id 
-                            WHERE r.status = true 
-                            AND r.discount = 0 
-                            LIMIT 10;";
+                        FROM room r 
+                        LEFT JOIN photo p ON r.id = p.room_id 
+                        WHERE r.status = true 
+                        AND r.id != $id
+                        AND r.discount = 0 
+                        ORDER BY rand()
+                        LIMIT 10;";
 
     $result = $conn->query($sql);
     $room = $result->fetch_assoc();
@@ -78,11 +80,13 @@ if (isset($_GET["room_id"]) && isset($_GET["trip-start"]) && isset($_GET["trip-e
                     r.id, p.URL, b.check_in, b.check_out;";
 
     $sqlRelatedRooms = "SELECT r.*, p.URL 
-                            FROM room r 
-                            LEFT JOIN photo p ON r.id = p.room_id 
-                            WHERE r.status = true 
-                            AND r.discount = 0 
-                            LIMIT 10;";
+                        FROM room r 
+                        LEFT JOIN photo p ON r.id = p.room_id 
+                        WHERE r.status = true 
+                        AND r.id != $id
+                        AND r.discount = 0 
+                        ORDER BY rand()
+                        LIMIT 10;";
 
     $result = $conn->query($sql);
     $room = $result->fetch_assoc();
