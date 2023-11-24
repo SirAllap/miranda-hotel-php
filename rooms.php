@@ -1,9 +1,9 @@
 <?php
 session_start();
 //BladeTemplate
-require_once('setup.php');
+require_once('view-setup.php');
 //DB config
-require_once('config.php');
+require_once('db-config.php');
 
 if (isset($_GET["trip-start"]) && isset($_GET["trip-end"])) {
     $start = htmlspecialchars($_GET["trip-start"]);

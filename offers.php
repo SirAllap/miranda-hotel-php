@@ -1,8 +1,8 @@
 <?php
 //BladeTemplate
-require_once('setup.php');
+require_once('view-setup.php');
 //DB config
-require_once('config.php');
+require_once('db-config.php');
 
 $sqlWithDiscounts = "SELECT r.*, p.URL 
                     FROM room r 

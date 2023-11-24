@@ -1,8 +1,9 @@
 <?php
 //BladeTemplate
-require_once('setup.php');
+require_once('view-setup.php');
 //DB config
-require_once('config.php');
+require_once('db-config.php');
+
 $confirmation = '';
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["phone"]) && isset($_POST["subject"]) && isset($_POST["message"])) {
@@ -19,12 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->bind_param("sssss", $full_name, $email, $phone_number, $subject_of_review, $review_body);
 
         if ($stmt->execute()) {
-
             $confirmation = 'Form sent!';
         } else {
             $confirmation = 'Form not sent! | Error: ' . $stmt->error;
         }
-
         $stmt->close();
     } else {
         $confirmation = "Form fields are not set.";
