@@ -17,6 +17,10 @@
 					<a href="/index.php"><span class="room-details-intro__breadcrumbs-home">Home</span></a>
 					<span class="room-details-intro__breadcrumbs-separator">&nbsp|&nbsp</span>
 					<span class="room-details-intro__breadcrumbs-about">Room Details</span>
+					@if(isset($room))
+					<span class="room-details-intro__breadcrumbs-separator">&nbsp|&nbsp</span>
+					<span class="room-details-intro__breadcrumbs-about">{{ $room['room_type'] }}</span>
+					@endif
 				</div>
 			</div>
 		</section>
@@ -47,21 +51,20 @@
 		<img src="{{ $room['URL'] }}" alt="a photo of a hotel room" />
 	</div>
 	<div class="room-details-intro__rooms-details-availability">
-
 		@if(!isset($start) && !isset($end))
 		<p>Check Availability</p>
 		<form action="#" method="get">
 			<label for="">Check In</label>
-			<input name="trip-start" class=" room-details-intro__calendar-picker" type="date" value="{{$start}}" required />
+			<input name="trip-start" class=" room-details-intro__calendar-picker" type="date" value="{{$start}}" min="{{ date('Y-m-d') }}" max="{{ date('Y-m-d', strtotime('+2 Year')) }}" required />
 			<label for="">Check Out</label>
-			<input name="trip-end" class="room-details-intro__calendar-picker" type="date" value="{{$end}}" required />
+			<input name=" trip-end" class="room-details-intro__calendar-picker" type="date" value="{{$end}}" min="{{ date('Y-m-d', strtotime('+1 day')) }}" max="{{ date('Y-m-d', strtotime('+2 Year')) }}" required />
 			<input type="hidden" name="room_id" value="{{$room['id']}}" />
 			<button type="submit" class="button button--beige button--auto">
 				Check Availability
 			</button>
 		</form>
 		@else
-		<form action="" method="post">
+		<form action="/create-booking.php" method="post">
 			<p>Check Availability</p>
 			<label for="">Check In</label>
 			<input name="trip-start" class=" room-details-intro__calendar-picker" type="date" value="{{$start}}" required />
