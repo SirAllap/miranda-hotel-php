@@ -33,10 +33,7 @@
                     <span class="price-amount">${{$room['price']}}</span><span class="price-nigth">/Night</span>
                 </div>
                 <div class="offers-intro__red-price">
-                    @php
-                    $discountedPrice = intval($room['price'] - $room['price'] * $room['discount'] / 100);
-                    @endphp
-                    <span class="price-amount">${{ $discountedPrice }}</span>
+                    <span class="price-amount">${{ $room['priceWithDiscount'] }}</span>
                     <span class="price-nigth">/Night</span>
                 </div>
             </div>
