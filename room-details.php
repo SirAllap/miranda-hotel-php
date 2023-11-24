@@ -56,7 +56,8 @@ if (isset($_GET["room_id"]) && isset($_GET["trip-start"]) && isset($_GET["trip-e
     $resultRelatedRooms = $conn->query($sqlRelatedRooms);
     $rooms = $resultRelatedRooms->fetch_all(MYSQLI_ASSOC);
 
-    echo $blade->run('room-details', ['room' => $room, 'rooms' => $rooms, 'start' => $trip_start, 'end' => $trip_end]);
+    $confirmation = 'Checking availability!';
+    echo $blade->run('room-details', ['confirmation' =>  $confirmation, 'room' => $room, 'rooms' => $rooms, 'start' => $trip_start, 'end' => $trip_end]);
 } else if (isset($_GET["room_id"])) {
     isset($_SESSION['start']) ? $trip_start = $_SESSION['start'] : $trip_start = null;
     isset($_SESSION['end']) ? $trip_end = $_SESSION['end'] : $trip_end = null;
