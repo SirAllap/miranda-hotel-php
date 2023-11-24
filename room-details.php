@@ -14,11 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         $trip_end = htmlspecialchars($_GET["trip-end"]);
 
         $sql = "SELECT
-                r.*,
-                p.URL,
-                b.check_in,
-                b.check_out,
-                GROUP_CONCAT(a.amenities SEPARATOR ', ') AS all_amenities
+                    r.*,
+                    p.URL,
+                    b.check_in,
+                    b.check_out,
+                    GROUP_CONCAT(a.amenities SEPARATOR ', ') AS all_amenities
                 FROM
                     room r
                     INNER JOIN photo p ON r.id = p.room_id
@@ -27,21 +27,27 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
                     INNER JOIN booking b ON r.id = b.room_id
                 WHERE
                     r.id = $id
-                AND NOT EXISTS (
-                    SELECT 1
-                    FROM booking b_sub
-                    WHERE r.id = b_sub.room_id
-                    AND (
-                        ('$trip_start' BETWEEN b_sub.check_in AND b_sub.check_out)
-                        OR ('$trip_end' BETWEEN b_sub.check_in AND b_sub.check_out)
-                        OR (b_sub.check_in BETWEEN '$trip_start' AND '$trip_end')
-                        OR (b_sub.check_out BETWEEN '$trip_start' AND '$trip_end')
+                    AND NOT EXISTS (
+                        SELECT 1
+                        FROM booking b_sub
+                        WHERE r.id = b_sub.room_id
+                            AND (
+                                ('$trip_start' BETWEEN b_sub.check_in AND b_sub.check_out)
+                                OR ('$trip_end' BETWEEN b_sub.check_in AND b_sub.check_out)
+                                OR (b_sub.check_in BETWEEN '$trip_start' AND '$trip_end')
+                                OR (b_sub.check_out BETWEEN '$trip_start' AND '$trip_end')
+                            )
                     )
-                )
                 GROUP BY
                     r.id, p.URL, b.check_in, b.check_out;
                 ";
-        $sqlRelatedRooms = "SELECT r.*, p.URL FROM room r LEFT JOIN photo p ON r.id = p.room_id WHERE r.status = true AND r.discount = 0 LIMIT 10;";
+        $sqlRelatedRooms = "SELECT r.*, p.URL 
+                            FROM room r 
+                            LEFT JOIN photo p ON r.id = p.room_id 
+                            WHERE r.status = true 
+                            AND r.discount = 0 
+                            LIMIT 10;";
+
         $result = $conn->query($sql);
         $room = $result->fetch_assoc();
         $resultRelatedRooms = $conn->query($sqlRelatedRooms);
@@ -69,7 +75,13 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
                 GROUP BY
                     r.id, p.URL, b.check_in, b.check_out;";
 
-        $sqlRelatedRooms = "SELECT r.*, p.URL FROM room r LEFT JOIN photo p ON r.id = p.room_id WHERE r.status = true AND r.discount = 0 LIMIT 10;";
+        $sqlRelatedRooms = "SELECT r.*, p.URL 
+                            FROM room r 
+                            LEFT JOIN photo p ON r.id = p.room_id 
+                            WHERE r.status = true 
+                            AND r.discount = 0 
+                            LIMIT 10;";
+
         $result = $conn->query($sql);
         $room = $result->fetch_assoc();
         $resultRelatedRooms = $conn->query($sqlRelatedRooms);
@@ -88,7 +100,8 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         $special_request = htmlspecialchars($_POST["special-request"]);
         $room_id = $_SESSION['room_id'];
 
-        $sql = "INSERT INTO booking (guest, phone_number, email, order_date, check_in, check_out, special_request, status, room_id) VALUES (?, ?, ?, CURDATE(), ?, ?, ?, 'Check In', ?);";
+        $sql = "INSERT INTO booking (guest, phone_number, email, order_date, check_in, check_out, special_request, status, room_id) 
+                VALUES (?, ?, ?, CURDATE(), ?, ?, ?, 'Check In', ?);";
 
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("sssssss", $full_name, $phone_number, $email, $trip_start, $trip_end, $special_request, $room_id);
