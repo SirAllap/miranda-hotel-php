@@ -1,14 +1,3 @@
-<?php
-
-$month = date('m');
-$day = date('d');
-$tomorrowDay = date('d') + 1;
-$year = date('Y');
-
-$arrival = $year . '-' . $month . '-' . $day;
-$departure = $year . '-' . $month . '-' . $tomorrowDay;
-?>
-
 @extends('layout')
 @section('title', 'Home')
 
@@ -30,7 +19,7 @@ $departure = $year . '-' . $month . '-' . $tomorrowDay;
 					TAKE A TOUR
 				</button>
 			</a>
-			<a href="../aboutUs.php" style="text-decoration: none;">
+			<a href="../about-us.php" style="text-decoration: none;">
 				<button class="home-intro__button button button--grey">
 					LEARN MORE
 				</button>
@@ -43,11 +32,11 @@ $departure = $year . '-' . $month . '-' . $tomorrowDay;
 			<section class="home-intro__calendar-picker-inner">
 				<div class="home-intro__calendar-picker-inner-input home-intro__calendar-picker-inner-input--left">
 					<label for="arrival">Arrival date:</label>
-					<input type="date" id="arrival" name="trip-start" value="<?php echo $arrival; ?>" min="2023-11-01" max="2025-01-01" />
+					<input type="date" id="arrival" name="trip-start" value="{{ date('Y-m-d') }}" min="2023-11-01" max="2025-01-01" />
 				</div>
 				<div class="home-intro__calendar-picker-inner-input home-intro__calendar-picker-inner-input--right">
 					<label for="departure">LeDeparture date:</label>
-					<input type="date" id="departure" name="trip-end" value="<?php echo $departure; ?>" min="2023-11-01" max="2025-01-01" />
+					<input type="date" id="departure" name="trip-end" value="{{ date('Y-m-d', strtotime('+1 day')) }}" min="2023-11-01" max="2025-01-01" />
 				</div>
 				<button type="submit" class="home-intro__calendar-picker-button button button--beige button--auto">
 					CHECK AVAILABILITY

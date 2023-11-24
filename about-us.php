@@ -9,5 +9,5 @@ $result = $conn->query($sql);
 
 $rooms = $result->fetch_all(MYSQLI_ASSOC);
 
-echo $blade->run('aboutUs');
+echo $blade->run('about-us');
 $conn->close();

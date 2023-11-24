@@ -11,7 +11,7 @@ const rooms_Link = document.querySelector('.item-link-rooms')
 const offers_Link = document.querySelector('.item-link-offers')
 const contact_Link = document.querySelector('.item-link-contact')
 
-if (window.location.href.includes('aboutUs')) {
+if (window.location.href.includes('about-us')) {
     about_Us_Link.classList.toggle('active')
 }
 if (window.location.href.includes('rooms')) {
