@@ -32,11 +32,11 @@
 			<section class="home-intro__calendar-picker-inner">
 				<div class="home-intro__calendar-picker-inner-input home-intro__calendar-picker-inner-input--left">
 					<label for="arrival">Arrival date:</label>
-					<input type="date" id="arrival" name="trip-start" value="{{ date('Y-m-d') }}" min="2023-11-01" max="2025-01-01" />
+					<input type="date" id="arrival" name="trip-start" value="{{ date('Y-m-d') }}" min="{{ date('Y-m-d') }}" max="{{ date('Y-m-d', strtotime('+2 Year')) }}" />
 				</div>
 				<div class="home-intro__calendar-picker-inner-input home-intro__calendar-picker-inner-input--right">
 					<label for="departure">LeDeparture date:</label>
-					<input type="date" id="departure" name="trip-end" value="{{ date('Y-m-d', strtotime('+1 day')) }}" min="2023-11-01" max="2025-01-01" />
+					<input type="date" id="departure" name="trip-end" value="{{ date('Y-m-d', strtotime('+1 day')) }}" min="{{ date('Y-m-d', strtotime('+1 day')) }}" max="{{ date('Y-m-d', strtotime('+2 Year')) }}" />
 				</div>
 				<button type="submit" class="home-intro__calendar-picker-button button button--beige button--auto">
 					CHECK AVAILABILITY
