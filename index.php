@@ -1,9 +1,9 @@
 <?php
 session_start();
 //BladeTemplate
-require_once('view-setup.php');
+require_once('./view-setup.php');
 //DB config
-require_once('db-config.php');
+require_once('./db-config.php');
 
 $sql = "SELECT r.*, p.URL 
         FROM room r 

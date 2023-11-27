@@ -12,7 +12,7 @@
 			<h1 class="aboutus-intro__head-text big-title">About Us</h1>
 			<div class="aboutus-intro__breadcrumbs-container">
 				<div class="aboutus-intro__breadcrumbs">
-					<a href="/index.php"><span class="aboutus-intro__breadcrumbs-home">Home</span></a>
+					<a href="/index"><span class="aboutus-intro__breadcrumbs-home">Home</span></a>
 					<span class="aboutus-intro__breadcrumbs-separator">&nbsp|&nbsp</span>
 					<span class="aboutus-intro__breadcrumbs-about">About</span>
 				</div>
@@ -51,7 +51,7 @@
 				unrivaled flavors and impeccable service, embracing the
 				epitome of opulence.
 			</p>
-			<a href="../index.php#video" style="text-decoration: none;">
+			<a href="../index#video" style="text-decoration: none;">
 				<button class="aboutus-intro__restaurant-button button button--beige">
 					TAKE A TOUR
 				</button>
