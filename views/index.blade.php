@@ -247,7 +247,7 @@
 						Special Offers
 					</h4>
 					<p class="home-facilities__features-body filled-text">
-						xperience opulent luxury with our exclusive
+						Experience opulent luxury with our exclusive
 						hotel packages, indulging in lavish amenities
 						and services for an unforgettable getaway.
 					</p>

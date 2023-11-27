@@ -38,7 +38,7 @@
 <main class=" room-details-intro__room-details">
 	<div class="room-details-intro__room-details-wrapper">
 		<div class="room-details-intro__room-details-text-wrapper">
-			<h4 class="subtitle-trigger">{{ $room['room_type'] }}</h4>
+			<h4 class="subtitle-trigger">Room - {{ $room['room_number'] }}</h4>
 			<h1 class="regular-title">Luxury {{ $room['room_type'] }}</h1>
 			@if($room['discount'])
 			<span class="discounted-price">${{ $room['priceWithDiscount'] }}</span>
